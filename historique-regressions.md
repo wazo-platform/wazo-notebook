@@ -1,3 +1,5 @@
+-   16.02 : 1
+    -   Connexion au xivoclient chiffré fail si les certificats n'ont pas été copiés sur le slave.
 -   16.01 : 4
     -   MWI ne s'affiche pas
     -   xivo-auth-keys desync avec HA
