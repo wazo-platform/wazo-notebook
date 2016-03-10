@@ -1,3 +1,5 @@
+- 16.03 : 1
+  - *guest est cassé
 - 16.02 : 1
   - Connexion au xivoclient chiffré fail si les certificats n'ont pas été copiés sur le slave.
 - 16.01 : 4
