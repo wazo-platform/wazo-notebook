@@ -1,3 +1,5 @@
+- 16.04 : 1
+  - Timeout dans la webi pour afficher "utilisateurs(exten@context)" dans paging (et autres)
 - 16.03 : 1
   - *guest est cassé
 - 16.02 : 1
