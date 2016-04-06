@@ -6,13 +6,21 @@ Varia
 -----
 
  * Ajouter des "enabled" partout
+   * Exposer les commented dans l'api rest 
  * Déplacer "voicemail_enabled" dans la ressource user
+   * voicemail_enabled dans association user-voicemail -> user
  * Mettre toutes les ressources au pluriel
+   * ex: /extensions/id/line  -> lines
  * Migrer les anciens plugins au nouveau
+   * xivo_confd/resources dans xivo_confd/plugins
  * Séparer les notions de charger un API REST vs charger un service dans un plugin
+   * ex: creer le service de device une seule fois dans le demon
  * remplacer les anciens POST d'association par des PUT
+   * ex: POST /users/id/lines  -> PUT /users/id/lines/id
  * Créer une ressource séparé pour les appels entrants
+   * but: associer les appels entrants vers autre chose qu'un user
  * Retirer la notion d'association d'un appel entrant sur /lines/:id/extensions
+   * suite du point precedent
 
 
 Suppression et déassociation
@@ -33,6 +41,10 @@ Supprimer automatiquement toutes les ressources associés
 	DELETE /lines/:id?recursive=1
 	DELETE /lines/:id/recursive
 
+**remarques**
+
+* deassociation a besoin d'un certain ordre
+* /recursive plus facile pour controler les ACL
 
 2.0
 ===
@@ -71,6 +83,10 @@ Après
 	}
 
 
+Notes:
+* peut servir lors de la pagination pour avoir directement l'url de la prochaine page, pas besoin de la calculer en js
+* au lieu de mettre l'url complete, on peut mettre juste le path sans scheme/host/port
+
 Slugs
 -----
 
@@ -95,6 +111,9 @@ Exemples:
 	GET /extensions/:context/:exten
 	GET /extensions/default/1000
 
+Notes
+* le tuple de slugs doit etre unique (pas lastname/firstname)
+
 Erreurs
 -------
 
@@ -116,7 +135,7 @@ Erreurs
 
 	}
 
-Nouveau 
+Voir aussi: http://www.rfc-editor.org/rfc/rfc7807.txt
 
 Suppression
 -----------
@@ -267,7 +286,7 @@ User-Voicemail
 	}
 
 
-Multi-Ligne
+Multi-User (une ligne avec plusieurs users)
 ===========
 
  * supprimer code touche de fonctions (webi)
@@ -322,10 +341,11 @@ PK: (endpoint, endpoint_id)
  * interface
  * options
 
-Multi-User
+Multi-Line
 ==========
 
  * séparer la table user_line en 2
+   * permet de gerer a la fois 1 user N lines ET 1 line N users
  * Créer une hiéarchie de caller_id
 
 Tables
