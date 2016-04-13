@@ -26,7 +26,7 @@ Varia
 Suppression et déassociation
 ----------------------------
 
-**Objectifs**: 
+**Objectifs**:
 
  * réduire le nombre de requêtes nécessaire
  * simplifier la suppression
@@ -72,7 +72,7 @@ Avant :
 			}
 		]
 	}
-		
+
 
 Après
 
@@ -90,7 +90,7 @@ Notes:
 Slugs
 -----
 
-**Objectif:** 
+**Objectif:**
 
  * Réduire le nombre de requêtes
  * éviter de faire une recherche pour récupérer une ressource unique
@@ -140,9 +140,9 @@ Voir aussi: http://www.rfc-editor.org/rfc/rfc7807.txt
 Suppression
 -----------
 
-**Objectif**: 
+**Objectif**:
 
- * réduire le nombre de requêtes 
+ * réduire le nombre de requêtes
  * simplifier la suppression d'une ressource
 
 Supprimer une ressource parent déassocie ou supprime automatiquement les ressources enfants, selon ce qui est le plus logique
@@ -158,7 +158,7 @@ Exemples:
 		#Supprime l'endpoint
 		#Supprime l'extension
 		#Déassocie l'utilisateur
-		
+
 
 Créer, associer, déassocier
 ---------------------------
@@ -376,7 +376,7 @@ API
 	GET /users/:id/lines
 	GET-POST-PUT-DELETE /users/:id/lines/main
 	GET-POST-PUT-DELETE /users/:id/lines/secondary
-	
+
 	GET /lines/:id/users
 	GET-POST-PUT-DELETE /lines/:id/users/main
 	GET-POST-PUT-DELETE /lines/:id/users/secondary
