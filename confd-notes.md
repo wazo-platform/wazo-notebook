@@ -286,8 +286,14 @@ User-Voicemail
 	}
 
 
+Autres (idées)
+--------------
+
+ * Ne pas autoriser le post avec un champ non nullable (lors d'un put) à null
+
+
 Multi-User (une ligne avec plusieurs users)
-===========
+===========================================
 
  * supprimer code touche de fonctions (webi)
  * supprimer code provisionnement de poste (webi)
