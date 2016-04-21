@@ -1,3 +1,5 @@
+- 16.05 : 1
+  - xivo-agid n'a pas le bon acl pour faire un reset autoprov
 - 16.04 : 1
   - Timeout dans la webi pour afficher "utilisateurs(exten@context)" dans paging (et autres)
 - 16.03 : 1
