@@ -1,3 +1,7 @@
+- 16.06 : 3
+  - Oublie le merge d'une brance dans xivo-upgrade
+  - Impossible de mettre une majuscule pour le nom d'une ligne custom
+  - XiVO confd n'est pas démarré sur un install ISO (donc impossible d'acceder au wizard)
 - 16.05 : 1
   - xivo-agid n'a pas le bon acl pour faire un reset autoprov
 - 16.04 : 1
