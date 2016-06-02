@@ -1,5 +1,6 @@
+- 16.07 : 0 :D
 - 16.06 : 3
-  - Oublie le merge d'une brance dans xivo-upgrade
+  - Oublie le merge d'une branche dans xivo-upgrade
   - Impossible de mettre une majuscule pour le nom d'une ligne custom
   - XiVO confd n'est pas démarré sur un install ISO (donc impossible d'acceder au wizard)
 - 16.05 : 1
