@@ -13,6 +13,8 @@ Voici quelques points généraux à ne pas oublier. Tous les points ne sont pas 
     -   Au moins dans le README
 -   Tests client Python
 -   Code client Python
+-   Ajouter nouvelle ACL par défaut
+    -    backend xivo_user
 -   Changelog
     -   Documenter quelle version de XiVO provoque quel changement (faute de versioning de l'API)
 -   Autres clients
