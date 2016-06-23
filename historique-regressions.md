@@ -1,3 +1,4 @@
+- 16.08 : 0
 - 16.07 : 0 :D
 - 16.06 : 3
   - Oublie le merge d'une branche dans xivo-upgrade
