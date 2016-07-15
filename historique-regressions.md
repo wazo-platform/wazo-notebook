@@ -1,3 +1,7 @@
+- 16.09 : 3
+  - Transfert vers la mauvaise personne (channel local listés à un user)
+  - Impossible de charger le fichier api.json dans xivo-confd
+  - Mauvais call logs
 - 16.08 : 0
 - 16.07 : 0 :D
 - 16.06 : 3
