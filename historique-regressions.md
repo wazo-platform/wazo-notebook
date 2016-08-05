@@ -1,3 +1,7 @@
+- 16.10 : 3
+  - Échec d'appel XiVO Client #25 avec Aastra
+  - Échec d'association multi-user à une même ligne
+  - Activation de la séparation par contexte pas pris en compte par xivo-confgend
 - 16.09 : 3
   - Transfert vers la mauvaise personne (channel local listés à un user)
   - Impossible de charger le fichier api.json dans xivo-confd
