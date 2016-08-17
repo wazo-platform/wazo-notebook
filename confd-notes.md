@@ -7,16 +7,16 @@ Varia
 
  * Ajouter des "enabled" partout
    * Exposer les commented dans l'api rest 
- * Déplacer "voicemail_enabled" dans la ressource user
-   * voicemail_enabled dans association user-voicemail -> user
- * Mettre toutes les ressources au pluriel
-   * ex: /extensions/id/line  -> lines
- * Migrer les anciens plugins au nouveau
-   * xivo_confd/resources dans xivo_confd/plugins
+ * Déplacer "voicemail_enabled" dans la ressource user-
+   * ~~voicemail_enabled dans association user-voicemail -> user~~
+ * ~~Mettre toutes les ressources au pluriel~~
+   * ~~ex: /extensions/id/line  -> lines~~
+ * ~~Migrer les anciens plugins au nouveau~~
+   * ~~xivo_confd/resources dans xivo_confd/plugins~~
  * Séparer les notions de charger un API REST vs charger un service dans un plugin
    * ex: creer le service de device une seule fois dans le demon
- * remplacer les anciens POST d'association par des PUT
-   * ex: POST /users/id/lines  -> PUT /users/id/lines/id
+ * ~~remplacer les anciens POST d'association par des PUT~~
+   * ~~ex: POST /users/id/lines  -> PUT /users/id/lines/id~~
  * Créer une ressource séparé pour les appels entrants
    * but: associer les appels entrants vers autre chose qu'un user
  * Retirer la notion d'association d'un appel entrant sur /lines/:id/extensions
@@ -350,29 +350,29 @@ PK: (endpoint, endpoint_id)
 Multi-Line
 ==========
 
- * séparer la table user_line en 2
-   * permet de gerer a la fois 1 user N lines ET 1 line N users
+ * ~~séparer la table user_line en 2~~
+   * ~~permet de gerer a la fois 1 user N lines ET 1 line N users~~
  * Créer une hiéarchie de caller_id
 
-Tables
+~~Tables~~
 ------
 
-###user_line
+###~~user_line~~
 
-PK: (user_id, line_id)
+~~PK: (user_id, line_id)~~
 
- * user_id
- * line_id
- * main_user (boolean)
- * main_line (boolean)
+ * ~~user_id~~
+ * ~~line_id~~
+ * ~~main_user (boolean)~~
+ * ~~main_line (boolean)~~
 
-###line_extension
+###~~line_extension~~
 
-PK: (line_id, extension_id)
+~~PK: (line_id, extension_id)~~
 
- * line_id
- * extension_id
- * main_extension (boolean)
+ * ~~line_id~~
+ * ~~extension_id~~
+ * ~~main_extension (boolean)~~
 
 API
 ---
