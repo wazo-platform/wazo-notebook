@@ -1,3 +1,5 @@
+- 16.11 : 1
+  - Erreur de migration BD lorsqu'il y a presence de multi users par ligne
 - 16.10 : 3
   - Échec d'appel XiVO Client #25 avec Aastra
   - Échec d'association multi-user à une même ligne
