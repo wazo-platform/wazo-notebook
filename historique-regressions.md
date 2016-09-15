@@ -1,3 +1,4 @@
+- 16.12 : 0
 - 16.11 : 1
   - Erreur de migration BD lorsqu'il y a presence de multi users par ligne
 - 16.10 : 3
