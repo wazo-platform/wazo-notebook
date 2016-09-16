@@ -1,7 +1,7 @@
 Architecture technique
 ----------------------
 
-Les nouveaux miroirs sont disponible sur **mirror.xivo.fr**. La solution est composé :
+Les nouveaux miroirs sont disponible sur **mirror.xivo.io**. La solution est composé :
 
 -   reprepro : pour la gestion des miroirs
 -   nginx : pour la partie serveur http
@@ -91,7 +91,7 @@ Toute la configuration d'un miroir se trouve dans le répertoire configuration, 
 -   update : ce fichier est important. C'est en effet ici que nous allons définir comment se synchroniser sur un miroir distant ou local :
 
 `Name: lenny-xivo-gallifrey-rc`
-`Method: `[`http://mirror.xivo.fr/debian/`](http://mirror.xivo.fr/debian/)
+`Method: `[`http://mirror.xivo.io/debian/`](http://mirror.xivo.io/debian/)
 `Suite: lenny-xivo-gallifrey-rc`
 `Components: main non-free`
 `Architectures: i386 source`
