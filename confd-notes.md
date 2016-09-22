@@ -17,10 +17,10 @@ Varia
    * ex: creer le service de device une seule fois dans le demon
  * ~~remplacer les anciens POST d'association par des PUT~~
    * ~~ex: POST /users/id/lines  -> PUT /users/id/lines/id~~
- * Créer une ressource séparé pour les appels entrants
-   * but: associer les appels entrants vers autre chose qu'un user
- * Retirer la notion d'association d'un appel entrant sur /lines/:id/extensions
-   * suite du point precedent
+ * ~~Créer une ressource séparé pour les appels entrants~~
+   * ~~but: associer les appels entrants vers autre chose qu'un user~~
+ * ~~Retirer la notion d'association d'un appel entrant sur /lines/:id/extensions~~
+   * ~~suite du point precedent~~
 
 
 Suppression et déassociation
