@@ -1,3 +1,7 @@
+- 16.14 : 3
+  - POST /calls = priority ne peut pas être un integer
+  - monitoring agentd (mauvais PID file)
+  - timeout non nécessaire sur les transferts directs
 - 16.13 : 0
 - 16.12 : 0
 - 16.11 : 1
