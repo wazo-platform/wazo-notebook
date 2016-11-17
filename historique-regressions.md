@@ -1,3 +1,4 @@
+- 16.15 : 0
 - 16.14 : 3
   - POST /calls = priority ne peut pas être un integer
   - monitoring agentd (mauvais PID file)
