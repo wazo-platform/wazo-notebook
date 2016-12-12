@@ -1,3 +1,5 @@
+- 16.16 : 1
+  - Régression asterisk, on ne peut plus transférer après une mise en attente au switchboard
 - 16.15 : 0
 - 16.14 : 3
   - POST /calls = priority ne peut pas être un integer
