@@ -1,7 +1,7 @@
 Voici quelques points généraux à ne pas oublier. Tous les points ne sont pas forcément applicables à toutes les API REST.
 
 - Doc Swagger
-  - Linker documentation.xivo.io si Swagger n'est pas suffisant
+  - Linker documentation.wazo.community si Swagger n'est pas suffisant
 - Tests intégration
   - Authentification
 - Tests unitaires

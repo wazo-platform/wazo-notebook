@@ -1,7 +1,7 @@
 XiVO - Migration Debian 7 (wheezy) vers 8 (jessie)
 ==================================================
 
--   Master ticket: <http://projects.xivo.io/issues/5910>
+-   Master ticket: <http://projects.wazo.community/issues/5910>
 -   Debian:
     -   Release info: <https://www.debian.org/releases/jessie/>
     -   Release notes: <https://www.debian.org/releases/jessie/releasenotes>

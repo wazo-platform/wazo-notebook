@@ -1,5 +1,5 @@
 - Créer le repo sur Github
-- Ajouter le hook Github: Jenkins Git vers <http://jenkins.xivo.io>
+- Ajouter le hook Github: Jenkins Git vers <https://jenkins.wazo.community>
 
 OU
 

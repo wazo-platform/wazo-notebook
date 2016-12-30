@@ -1,5 +1,5 @@
 # xivo-notebook
 
-Miscellaneous notes about / around XiVO.
+Miscellaneous notes about / around Wazo.
 
-This is not directly linked to the XiVO project.
+This is not directly linked to the Wazo project.
