@@ -1,4 +1,5 @@
-- 17.01 :
+- 17.02 : 0
+- 17.01 : 1
   - ISO ne finit pas l'installation (BD xivo-auth)
 - 16.16 : 1
   - Régression asterisk, on ne peut plus transférer après une mise en attente au switchboard
