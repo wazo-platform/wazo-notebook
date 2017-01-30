@@ -1,4 +1,5 @@
-- 17.02 : 0
+- 17.02 : 1
+  - Fuite mémoire Asterisk par ari.conf:channelvars
 - 17.01 : 1
   - ISO ne finit pas l'installation (BD xivo-auth)
 - 16.16 : 1
