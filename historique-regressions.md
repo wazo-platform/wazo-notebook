@@ -1,3 +1,5 @@
+- 17.03 : 1
+  - Reverse lookup avec numéro modifiés par in_callerid
 - 17.02 : 1
   - Fuite mémoire Asterisk par ari.conf:channelvars
 - 17.01 : 1
