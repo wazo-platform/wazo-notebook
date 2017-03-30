@@ -1,3 +1,4 @@
+- 17.05 : 0
 - 17.04 : 0
 - 17.03 : 1
   - Reverse lookup avec numéro modifiés par in_callerid
