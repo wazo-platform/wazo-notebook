@@ -1,3 +1,4 @@
+- 17.07 : 0
 - 17.06 : 1
   - Skill based routing patch mal updaté bloque Asterisk
 - 17.05 : 0
