@@ -1,3 +1,5 @@
+- 17.08 : 1
+  - xivo-service status montre wazo-plugind comme "unknown"
 - 17.07 : 0
 - 17.06 : 1
   - Skill based routing patch mal updaté bloque Asterisk
