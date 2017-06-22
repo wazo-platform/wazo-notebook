@@ -1,3 +1,5 @@
+- 17.09 : 1
+  - Oublier de mettre xivo-call-logs en purge (donc certains fichiers se marchaient sur les pieds)
 - 17.08 : 1
   - xivo-service status montre wazo-plugind comme "unknown"
 - 17.07 : 0
