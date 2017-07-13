@@ -1,3 +1,5 @@
+- 17.10 : 1
+  - Impossible de supprimer un contact phonebook si on l'a importé avec un field ID.
 - 17.09 : 1
   - Oublier de mettre xivo-call-logs en purge (donc certains fichiers se marchaient sur les pieds)
 - 17.08 : 1
