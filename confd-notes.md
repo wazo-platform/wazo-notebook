@@ -137,6 +137,8 @@ Erreurs
 
 Voir aussi: http://www.rfc-editor.org/rfc/rfc7807.txt
 
+Voir les specs dans [rest-api-errors.md](rest-api-errors.md).
+
 Suppression
 -----------
 
