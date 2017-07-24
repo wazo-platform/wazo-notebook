@@ -10,6 +10,11 @@ Checklist des choses à ne pas oublier lors de l'ajout d'un nouveau service à X
 - Le service est bien dans un état correct lors d'une mise à jour du slave
 - Le service est bien ajouté au schéma d'architecture
 - Le service n'est pas root par défaut
+- L'utilisateur du service ne peut pas se loguer
+- L'utilisateur du service n'a pas de /home/user, seulement un /var/lib/user si nécessaire
 - Si le service doit avoir le fichier de conf par défaut de consul, il fait partie du groupe consul
 - Les fichiers de config du service sont copiés par xivo-backup
 - La doc de backup précise que les fichiers sont copiés
+- Le service s'enregistre auprès de consul pour la découverte de services (test auto: xivo-acceptance / service_discovery.feature)
+- Les ports utilisés sont listés dans la doc
+- L'API REST est accessible via GET https://wazo/api/<service>
