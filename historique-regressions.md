@@ -1,3 +1,4 @@
+- 17.12 : 0
 - 17.11 : 0
 - 17.10 : 1
   - Impossible de supprimer un contact phonebook si on l'a importé avec un field ID.
