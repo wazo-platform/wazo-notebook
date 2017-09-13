@@ -1,3 +1,5 @@
+- 17.13 : 1
+  - Impossible de construire un paquet python debian pour plugind (il manque une dependance python-setuptools)
 - 17.12 : 0
 - 17.11 : 0
 - 17.10 : 1
