@@ -20,3 +20,9 @@ In the directory containing all repos:
 ## Remove DB migration scripts
 
 * Remove old SQL migration scripts from `xivo-manage-db`
+
+# Code scheduled for removal
+
+## 17.14
+
+* In version 17.14 the xivo-client-qt was renamed to wazo-client-qt. A function named renameConfigFile was added to rename the configuration. This function should be removed.
