@@ -1,3 +1,4 @@
+- 17.15 : 0
 - 17.14 : 1
   - Traduction du client-qt n'étaient pas disponible sur certaines resources.
 - 17.13 : 1
