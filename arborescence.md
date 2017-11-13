@@ -42,7 +42,7 @@
   - [ ] my-asset/
     - [X] docker-compose.yml: laisser les mount point pour les dépendances commentés
 - [ ] suite/
-  - [ ] helpers/
+  - [X] helpers/
     - [ ] base.py
     - [ ] fixtures.py
 - [ ] test-requirements.txt: pour les dépendances Git, utiliser les .zip
