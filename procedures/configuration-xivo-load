@@ -1,0 +1,8 @@
+
+https://www.blackmoreops.com/2014/09/22/linux-kernel-panic-issue-fix-hung_task_timeout_secs-blocked-120-seconds-problem/
+
+root@xivo-load:~# sysctl -w vm.dirty_ratio=10
+vm.dirty_ratio = 10
+root@xivo-load:~# sysctl -w vm.dirty_background_ratio=5
+vm.dirty_background_ratio = 5
+root@xivo-load:~# sysctl -p
