@@ -1,3 +1,5 @@
+- 17.16 : 1
+  - La version pas bumpé du wazoclient permettait de DOSer xivo-ctid
 - 17.15 : 0
 - 17.14 : 1
   - Traduction du client-qt n'étaient pas disponible sur certaines resources.
