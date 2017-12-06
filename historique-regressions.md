@@ -1,3 +1,4 @@
+- 17.17 : 0
 - 17.16 : 1
   - La version pas bumpé du wazoclient permettait de DOSer xivo-ctid
 - 17.15 : 0
