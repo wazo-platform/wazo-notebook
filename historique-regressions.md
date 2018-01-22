@@ -1,3 +1,9 @@
+- 18.01 : 5
+  - auto answer Polycom (nouvelle version de request n'accepte pas de header mal formatté)
+  - le module confbridge ne se load plus (erreur dans les sections générées)
+  - indicateur du nombre de voicemail dans wazoclient ne fonctionne plus
+  - la section interface dans la dwhowebi est cassée (stretch vs eth0)
+  - le market de prod avec les versions avec tiret est cassé
 - 17.17 : 0
 - 17.16 : 1
   - La version pas bumpé du wazoclient permettait de DOSer xivo-ctid
