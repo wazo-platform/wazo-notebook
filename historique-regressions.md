@@ -1,3 +1,4 @@
+- 18.02 : 0
 - 18.01 : 5
   - auto answer Polycom (nouvelle version de request n'accepte pas de header mal formatté)
   - le module confbridge ne se load plus (erreur dans les sections générées)
