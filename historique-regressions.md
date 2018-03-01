@@ -1,3 +1,5 @@
+- 18.03 : 1
+  - BS filters admin UI: si l'utilisateur boss est supprimé, admin-ui affiche une erreur à la place du BS filter
 - 18.02 : 0
 - 18.01 : 5
   - auto answer Polycom (nouvelle version de request n'accepte pas de header mal formatté)
