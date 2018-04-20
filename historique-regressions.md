@@ -1,3 +1,9 @@
+- 18.04 : 6
+  - Call logs ne sont pas générés lors d'appels juste après l'upgrade
+  - Réplication HA envoie des mails par cron toutes les heures
+  - Switchboard: téléphones Snom ne décrochent pas lors du clic Wazo Client
+  - UNFIXED: (régression connue à l'avance) xlet people et répertoires téléphoniques n'affichent pas les utilisateurs Wazo
+  - UNFIXED: impossible de désactiver un utilisateur dans webi
 - 18.03 : 1
   - BS filters admin UI: si l'utilisateur boss est supprimé, admin-ui affiche une erreur à la place du BS filter
 - 18.02 : 0
