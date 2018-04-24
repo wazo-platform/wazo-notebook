@@ -39,8 +39,14 @@
 - [X] Makefile
 - [ ] Dockerfile-*
 - [ ] assets/
-  - [ ] my-asset/
-    - [X] docker-compose.yml: laisser les mount point pour les dépendances commentés
+  - [X] docker-compose.yml: laisser les mount point pour les dépendances commentés
+  - [ ] docker-compose.*.override.yml: version=3
+  - [ ] ssl/
+    - [ ] README.md
+    - [ ] openssl.conf
+    - [ ] <daemon>/
+      - [ ] server.crt
+  - [ ] daemon_data/
 - [ ] suite/
   - [X] helpers/
     - [ ] base.py
