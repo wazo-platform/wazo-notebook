@@ -14,6 +14,7 @@
 * xivo-build-tools
 * xivo-tools: repo list
 * xivo-utils : wazo-reset
+* xivo-upgrade: purge old package
 * swagger-doc
 * monitoring
 * install-cd
