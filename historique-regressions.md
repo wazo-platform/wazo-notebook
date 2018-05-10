@@ -1,3 +1,4 @@
+- 18.05 : 0
 - 18.04 : 6
   - Call logs ne sont pas générés lors d'appels juste après l'upgrade
   - Réplication HA envoie des mails par cron toutes les heures
