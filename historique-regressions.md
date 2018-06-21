@@ -1,3 +1,5 @@
+- 18.07 : 1
+  - Impossible d'appeler avec wazoclient/unicom
 - 18.06 : 0
 - 18.05 : 0
 - 18.04 : 6
