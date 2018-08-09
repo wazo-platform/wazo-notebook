@@ -1,3 +1,5 @@
+- 18.09 : 1
+  - Question sur l'ISO au configure de wazo-auth
 - 18.08 : 0
 - 18.07 : 1
   - Impossible d'appeler avec wazoclient/unicom
