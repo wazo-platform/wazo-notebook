@@ -15,7 +15,7 @@ General rule: one repo per Debian package
 - `*-cli`: CLI tools for using REST API, e.g. xivo-agentd-cli is a CLI tool for interacting with the REST API provided by the daemon xivo-agentd. The CLI tools use the `*-client` library.
 - others: forks, older packaging repos, misc tools
 
-## Not-packaged repos
+## Repos that are not Debian-packaged
 
 ### Public-oriented repos
 
