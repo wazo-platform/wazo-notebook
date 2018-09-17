@@ -4,15 +4,15 @@ General rule: one repo per Debian package
 
 ## Conventions
 
-- xivo-*: older repositories. Will be renamed to wazo-* eventually.
-- wazo-*: newer repositories
-  - wazo-admin-ui-*: plugins for wazo-admin-ui, the new web interface for Wazo
-- debian-repo-*: Debian mirror configuration (for reprepro)
-- asterisk-*: Variants of Asterisk package (debug, without patches, etc.)
+- `xivo-*`: older repositories. Will be renamed to `wazo-*` eventually.
+- `wazo-*`: newer repositories
+  - `wazo-admin-ui-*`: plugins for wazo-admin-ui, the new web interface for Wazo
+- `debian-repo-*`: Debian mirror configuration (for reprepro)
+- `asterisk-*`: Variants of Asterisk package (debug, without patches, etc.)
 
-- *-packaging: Debian packaging repos, for libraries/software not yet packaged by Debian
-- *-client: Python libraries for using REST API, e.g. xivo-confd-client is a library for the REST API provided by the daemon xivo-confd
-- *-cli: CLI tools for using REST API, e.g. xivo-agentd-cli is a CLI tool for interacting with the REST API provided by the daemon xivo-agentd. The CLI tools use the *-client library.
+- `*-packaging`: Debian packaging repos, for libraries/software not yet packaged by Debian
+- `*-client`: Python libraries for using REST API, e.g. xivo-confd-client is a library for the REST API provided by the daemon xivo-confd
+- `*-cli`: CLI tools for using REST API, e.g. xivo-agentd-cli is a CLI tool for interacting with the REST API provided by the daemon xivo-agentd. The CLI tools use the `*-client` library.
 - others: forks, older packaging repos, misc tools
 
 ## Not-packaged repos
