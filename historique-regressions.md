@@ -1,3 +1,6 @@
+- 18.10 : 2
+  - Routage par compétences avec ancienne configuration
+  - Change VM pass multi-tenant/sans authentification
 - 18.09 : 1
   - Question sur l'ISO au configure de wazo-auth
 - 18.08 : 0
