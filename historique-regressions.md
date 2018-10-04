@@ -1,3 +1,5 @@
+- 18.11 : 1
+  - Nouvelle lignes dans le email body
 - 18.10 : 2
   - Routage par compétences avec ancienne configuration
   - Change VM pass multi-tenant/sans authentification
