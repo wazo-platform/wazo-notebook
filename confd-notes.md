@@ -117,27 +117,10 @@ Notes
 Erreurs
 -------
 
-**Objectifs**
-
- * Permettre au client d'identifier précisément quel champ a causé l'erreur
-
-**NOTE**: Il vaut peut-être mieux de se calquer sur le modèle d'erreurs de flask-restful à fin d'éviter une couche de conversion d'erreurs en surplus.
-
-	{
-		"message": "Message générique, un résumé."
-		"error_id": "code_erreur"
-		"timestamp": 123456789.0
-		"details": {
-			"firstname": "champ obligatoire",
-			"ring_seconds": "doit être un chiffre",
-			...
-		}
-
-	}
+Voir les specs dans [rest-api-errors.md](rest-api-errors.md).
 
 Voir aussi: http://www.rfc-editor.org/rfc/rfc7807.txt
 
-Voir les specs dans [rest-api-errors.md](rest-api-errors.md).
 
 Suppression
 -----------
