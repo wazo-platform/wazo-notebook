@@ -1,3 +1,5 @@
+- 18.12 : 1
+  - Fichier nova-compatibility en trop dans /etc/asterisk/cel.d
 - 18.11 : 1
   - Nouvelle lignes dans le email body
 - 18.10 : 2
