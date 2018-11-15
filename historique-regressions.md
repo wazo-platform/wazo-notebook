@@ -1,3 +1,5 @@
+- 18.13 : 1
+  - Manque une dépendance vers python3-cherrypy3 dans ctid-ng
 - 18.12 : 1
   - Fichier nova-compatibility en trop dans /etc/asterisk/cel.d
 - 18.11 : 1
