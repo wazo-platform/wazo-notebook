@@ -33,14 +33,14 @@
     - [ ] models.py (répertoire si nécessaire)
     - [ ] queries.py (répertoire si nécessaire)
   - [ ] templates/: les templates qui ne servent qu'au démon et qui n'ont pas vocation à être utilisés par les administrateurs
-  
+
 # Arboresence typique des tests d'intégration
 
 - [X] Makefile
 - [ ] Dockerfile-*
 - [ ] assets/
   - [X] docker-compose.yml: laisser les mount point pour les dépendances commentés
-  - [ ] docker-compose.*.override.yml: version=3
+  - [X] docker-compose.*.override.yml: version=3
   - [ ] ssl/
     - [ ] README.md
     - [ ] openssl.conf
