@@ -30,7 +30,6 @@ General rule: one repo per Debian package
 - [xivo-blog](https://github.com/wazo-pbx/xivo-blog): Blog exposed on http://blog.wazo.community
 - [xivo-migration-scripts](https://github.com/wazo-pbx/xivo-migration-scripts): Wazo install scripts exposed on http://mirror.wazo.community/fai/xivo-migration
 - [xivo-presentations](https://github.com/wazo-pbx/xivo-presentations): Collection of presentations about Wazo
-- [xivo-ws](https://github.com/wazo-pbx/xivo-ws): Python library to interact with the deprecated Wazo WebServices
 
 ### Development
 
