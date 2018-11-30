@@ -6,7 +6,6 @@ General rule: one repo per Debian package
 
 - `xivo-*`: older repositories. Will be renamed to `wazo-*` eventually.
 - `wazo-*`: newer repositories
-  - `wazo-admin-ui-*`: plugins for wazo-admin-ui, the new web interface for Wazo
 - `debian-repo-*`: Debian mirror configuration (for reprepro)
 - `asterisk-*`: Variants of Asterisk package (debug, without patches, etc.)
 
