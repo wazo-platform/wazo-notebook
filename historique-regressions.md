@@ -1,3 +1,14 @@
+- 18.14 : 10  (passage à PJSIP et migration de xivo-service vers wazo-user)
+  - PJSIP config dupliqué sur trunk avec même host
+  - change-pass-vm token backend
+  - timeout nestbox (pjsip reload multiple reads)
+  - Trunk SIP same host
+  - Paging SIP -> PJSIP
+  - Dialplan loop detection PJSIP_HEADER
+  - Dird service token
+  - Doc migration ligne custom SIP -> PJSIP
+  - Agent listen SIP -> PJSIP
+  - Call logs xivo-ctid SIP ou PJSIP
 - 18.13 : 1
   - Manque une dépendance vers python3-cherrypy3 dans ctid-ng
 - 18.12 : 1
