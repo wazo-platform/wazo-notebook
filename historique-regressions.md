@@ -1,3 +1,8 @@
+- 19.03 : 4
+  - Configuration NAT avec plusieurs local_net. Impossible dans l'interface
+  - Autoprov reboot tout les devices en autoprov lors d'un approvisionnement
+  - Langue par défaut des devices en autoprov n'a pas de prompt
+  - Aastra 6731i pas de son sur les originates et transferts ne fonctionnent pas
 - 18.14 : 10  (passage à PJSIP et migration de xivo-service vers wazo-user)
   - PJSIP config dupliqué sur trunk avec même host
   - change-pass-vm token backend
