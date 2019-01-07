@@ -10,6 +10,7 @@
 
 # Arborescence typique pour un démon
 
+- [ ] AUTHORS: Contient la liste des contributeurs. Utiliser `Wazo Communication Inc.`
 - [ ] requirements.txt: pour les dépendances Git, utiliser les .zip
 - [ ] test-requirements.txt: pour les dépendances Git, utiliser les .zip
 - [ ] bin/: ne pas mettre de lanceur, utiliser setup.py:console_scripts
