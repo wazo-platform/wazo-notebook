@@ -19,6 +19,8 @@ REST API
 ---
 
 When I make a request with no token
+When I make a request with wrong tenant
+When I make a request with wrong resource_id
 
 When I make a POST/PUT/DELETE request
 When I make the exact same request a second time
