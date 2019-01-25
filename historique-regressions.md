@@ -1,4 +1,6 @@
-- 19.03 : 4
+- 19.02 : 1
+  - Les téléphones des utilisateurs nouvellement créées ne se reconnectent pas sur le slave. 
+- 19.01 : 4
   - Configuration NAT avec plusieurs local_net. Impossible dans l'interface
   - Autoprov reboot tout les devices en autoprov lors d'un approvisionnement
   - Langue par défaut des devices en autoprov n'a pas de prompt
