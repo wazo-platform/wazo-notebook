@@ -25,3 +25,16 @@ DELETE /user/12
 ```
 
 Generalization: do not raise an error if the desired state of a resource is already attained.
+
+## PUT response = no body
+
+When receiving a PUT query, do not send the resource back in response.
+
+Pros:
+- less bandwidth
+- still available in edit event and query body
+- generally unused
+
+Cons:
+- body may be useful
+- resource may be deleted right after the PUT and won't be available by GET
