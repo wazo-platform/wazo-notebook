@@ -1,4 +1,6 @@
-Dès que le validateur considère une étape insuffisante, on retourne la balle aux développeurs en charge des branches
+# Checklist de validation
+
+Note: Dès que le validateur considère une étape insuffisante, on retourne la balle aux développeurs en charge des branches. Le validateur ne devrait pas passer trop de temps à faire des corrections . Oui c'est dur parfois, ça le fait à tout le monde :)
 
 1.  Effectuer le code review
 2.  Fusionner (merge) les branches dans master (localement)
@@ -14,8 +16,7 @@ Dès que le validateur considère une étape insuffisante, on retourne la balle 
     1.  Relire la documentation associée
     2.  Si modification du protocole CTI, vérifier que le changement est documenté
 
-7.  Confirmer que la feature/le bugfix fonctionne
+7.  Confirmer que la feature/le bugfix fonctionne manuellement
 8.  Push sur origin (+ supprimer branche + "git fetch -p")
-9.  Rebuild
 10. Feedback au(x) développeur(s) de l'incrément fonctionnel
-11. Marquer le ticket redmine correspondant comme resolved, valider qu'il est bien sur la roadmap. Si le ticket n'existe pas, le créer.
+11. Marquer le ticket correspondant comme resolved, valider qu'il est bien sur la roadmap. Si le ticket n'existe pas, le créer.
