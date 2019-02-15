@@ -1,5 +1,11 @@
+- 19.03 : 5
+  - Variables de template non présentes dans le fichier common.conf.
+  - Le fichier de config pour les snom redirigent vers 127.0.0.1.
+  - Impossible d'afficher les utilisateurs dans nestbox.
+  - ACL de xivo-cti pour provd inccorects.
+  - Impossible de supprimer une catégorie de son dans Nestbox sans erreur lorsque connecté à une instance.
 - 19.02 : 1
-  - Les téléphones des utilisateurs nouvellement créées ne se reconnectent pas sur le slave. 
+  - Les téléphones des utilisateurs nouvellement créées ne se reconnectent pas sur le slave.
 - 19.01 : 4
   - Configuration NAT avec plusieurs local_net. Impossible dans l'interface
   - Autoprov reboot tout les devices en autoprov lors d'un approvisionnement
