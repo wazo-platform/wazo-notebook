@@ -22,7 +22,7 @@ url: http://wazo.community
 
 ## Dockerfile
 
-MAINTAINER Wazo Maintainers <dev@wazo.community>
+LABEL maintainer="Wazo Maintainers <dev@wazo.community>"
 
 ## .travis.yml
 
