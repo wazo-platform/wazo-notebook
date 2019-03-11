@@ -1,3 +1,8 @@
+- 19.04 : 4
+  - upgrade si fichier devices de provd n'existe pas (slave)
+  - upgrade dird -> check version
+  - migration config dird auto-générée ne fonctionne pas (events manqués)
+  - wazo-chatd: changement de présence -> token object
 - 19.03 : 5
   - Variables de template non présentes dans le fichier common.conf.
   - Le fichier de config pour les snom redirigent vers 127.0.0.1.
