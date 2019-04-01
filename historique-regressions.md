@@ -1,3 +1,6 @@
+- 19.05 : 2
+  - impossible d'utiliser *3 (ou autres options de Dial)
+  - provd n'injecte pas la bonne adresse IP dans la config des téléphones après une installation fraîche
 - 19.04 : 4
   - upgrade si fichier devices de provd n'existe pas (slave)
   - upgrade dird -> check version
