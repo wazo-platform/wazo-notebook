@@ -1,0 +1,13 @@
+- Create repo on Github
+- Add webhook to https://jenkins.wazo.community/github-webhook
+
+OR
+
+- Run script xivo-tools/dev-tools/new-repo
+
+THEN
+
+- Add repo in xivo-build-tools/etc/packages
+- Add repo in xivo-tools/dev-tools/repos si ce n'est pas un repo \*-packaging
+- Add job on Jenkins
+- Add job for integration tests in daily-integration-tests on Jenkins
