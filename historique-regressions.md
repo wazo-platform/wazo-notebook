@@ -1,5 +1,6 @@
-- 19.06 : 1
+- 19.06 : 2
   - manque 1 ACL pour la configuration des auth externe sur l'admin policy
+  - LDAP AD: impossible de configurer le unique_field_format en binary_uuid
 - 19.05 : 2
   - impossible d'utiliser *3 (ou autres options de Dial)
   - provd n'injecte pas la bonne adresse IP dans la config des téléphones après une installation fraîche
