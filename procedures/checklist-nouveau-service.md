@@ -18,4 +18,5 @@ Checklist des choses à ne pas oublier lors de l'ajout d'un nouveau service à W
 - Le service s'enregistre auprès de consul pour la découverte de services (test auto: xivo-acceptance / service_discovery.feature)
 - Les ports utilisés sont listés dans la doc
 - L'API REST est accessible via GET https://wazo/api/<service>
+  - Ajouter une entrée au test d'acceptance daily/http/http.feature
 - L'API REST est visible dans Swagger
