@@ -1,7 +1,7 @@
 Note: If you update this document, please also update checklist-remove-repo.md, if applicable
 
 - Create repo on Github
-- Add webhook to https://jenkins.wazo.community/github-webhook
+- Add webhook to https://jenkins.wazo.community/github-webhook/
 
 OR
 
