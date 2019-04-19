@@ -1,3 +1,5 @@
+- 19.06 : 1
+  - manque 1 ACL pour la configuration des auth externe sur l'admin policy
 - 19.05 : 2
   - impossible d'utiliser *3 (ou autres options de Dial)
   - provd n'injecte pas la bonne adresse IP dans la config des téléphones après une installation fraîche
