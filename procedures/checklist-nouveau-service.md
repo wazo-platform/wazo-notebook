@@ -15,8 +15,9 @@ Checklist des choses à ne pas oublier lors de l'ajout d'un nouveau service à W
 - Si le service doit avoir le fichier de conf par défaut de consul, il fait partie du groupe consul
 - Les fichiers de config du service sont copiés par xivo-backup
 - La doc de backup précise que les fichiers sont copiés
-- Le service s'enregistre auprès de consul pour la découverte de services (test auto: xivo-acceptance / service_discovery.feature)
+- Le service s'enregistre auprès de consul pour la découverte de services 
+  - Ajouter une entrée au test d'acceptance: `daily/service_discovery.feature`
 - Les ports utilisés sont listés dans la doc
 - L'API REST est accessible via GET https://wazo/api/<service>
-  - Ajouter une entrée au test d'acceptance daily/http/http.feature
+  - Ajouter une entrée au tests d'acceptance: `daily/http/http.feature`
 - L'API REST est visible dans Swagger
