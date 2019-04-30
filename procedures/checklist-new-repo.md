@@ -1,7 +1,12 @@
 Note: If you update this document, please also update checklist-remove-repo.md, if applicable
 
 - Create repo on Github
-- In Github repo settings, add a webhook with URL https://jenkins.wazo.community/github-webhook/
+- In the repo's settings, add a webhook
+  - Payload URL: `https://jenkins.wazo.community/github-webhook/`
+  - Content Type: `x-www-form-urlencoded`
+  - Select trigger events: 
+    - `Pushes`, 
+    - `Pull requests`
 
 OR
 
