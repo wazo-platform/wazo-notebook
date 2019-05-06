@@ -18,7 +18,7 @@
 * swagger-doc
 * monitoring
 * install-cd
-* xivo-acceptance
+* wazo-acceptance
 * jenkins job
 * translations
 * `/var/log/<service-name>.log`

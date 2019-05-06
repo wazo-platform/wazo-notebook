@@ -58,7 +58,7 @@ General rule: one repo per Debian package
 - [sccp-client](https://github.com/wazo-pbx/sccp-client): Library for interacting with Asterisk SCCP channel
 - [sccpp](https://github.com/wazo-pbx/sccpp): Call-spawner for Asterisk SCCP channel
 - [wazo-terraform](https://github.com/wazo-pbx/wazo-terraform): Tests using Terraform to deploy Wazo servers
-- [xivo-acceptance](https://github.com/wazo-pbx/xivo-acceptance): Automated acceptance tests for Wazo
+- [wazo-acceptance](https://github.com/wazo-pbx/wazo-acceptance): Automated acceptance tests for Wazo
 - [xivo-benchmark](https://github.com/wazo-pbx/xivo-benchmark): Benchmarking tests
 - [xivo-load-monitor](https://github.com/wazo-pbx/xivo-load-monitor): Load-tests monitor interface
 - [xivo-load-tester](https://github.com/wazo-pbx/xivo-load-tester): Tests scenarios for load testing
