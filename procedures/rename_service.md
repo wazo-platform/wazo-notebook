@@ -4,6 +4,7 @@
 * `/var/run/<service-name>/<service-name>.pid`
 * root package in the source code `<service_name>`
 * Docker image names `wazopbx/<service-name>`
+  * remove old image from docker hub
 * Source directory in Dockerfile `/usr/src/<service-name>`
 * Debian package name
   * debian/control
