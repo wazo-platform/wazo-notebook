@@ -1,4 +1,4 @@
-# xivo-notebook
+# wazo-notebook
 
 Miscellaneous notes about / around Wazo.
 
