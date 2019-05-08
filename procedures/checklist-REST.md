@@ -16,6 +16,6 @@ Voici quelques points généraux à ne pas oublier. Tous les points ne sont pas 
 - Ajouter nouvelle ACL par défaut
   -  backend wazo_user
 - Changelog
-  - Documenter quelle version de XiVO provoque quel changement (faute de versioning de l'API)
+  - Documenter quelle version de Wazo provoque quel changement (faute de versioning de l'API)
 - Autres clients
   - xivo-confd -\> xivo-tools/confd\_client
