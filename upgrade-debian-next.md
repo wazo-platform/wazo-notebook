@@ -20,9 +20,9 @@ In the directory containing all repos:
 
 ## Previous upgrade
 
-See todo list from previous upgrade:
+* See to-do list from previous upgrade:
 
-    * https://github.com/wazo-pbx/wazo-notebook/blob/master/upgrade-debian-8.md
+    * [upgrade-debian-8](https://github.com/wazo-pbx/wazo-notebook/blob/master/upgrade-debian-8.md)
 
 
 # Specific things to do for buster migration
