@@ -12,14 +12,16 @@ Toute la configuration de reprepro est disponible dans le répertoire **/data/re
 
 Un répertoire de gestion de miroir doit contenir les répertoires suivant :
 
-`[mirror:repository]tree -d -L 1`
-`.`
-`├── conf`
-`├── db`
-`├── dists`
-`├── incoming`
-`├── lists`
-`└── pool`
+```
+[mirror:repository]tree -d -L 1
+.
+├── conf
+├── db
+├── dists
+├── incoming
+├── lists
+└── pool
+```
 
 -   conf : contient les fichiers de configuration pour le miroir.
 -   db : les fichiers de bdb.
@@ -30,12 +32,14 @@ Un répertoire de gestion de miroir doit contenir les répertoires suivant :
 
 3 miroirs sont disponibles sur l'archi, voici la structure du rep **/data/reprepro** :
 
-`[mirror:reprepro]tree -d -L 1`
-`.`
-`├── archive`
-`├── keys`
-`├── people`
-`└── xivo`
+```
+[mirror:reprepro]tree -d -L 1
+.
+├── archive
+├── keys
+├── people
+└── xivo
+```
 
 -   archive : contient les packages pour les anciennes versions de xivo.
 -   keys : contient les clés permettant d'authentifier le miroir.
@@ -46,62 +50,74 @@ Un répertoire de gestion de miroir doit contenir les répertoires suivant :
 
 Toute la configuration d'un miroir se trouve dans le répertoire configuration, voici sa structure :
 
-`[mirror:xivo]tree conf `
-`conf`
-`├── distributions`
-`├── incoming`
-`├── options`
-`├── updates`
-`└── uploaders`
+```
+[mirror:xivo]tree conf 
+conf
+├── distributions
+├── incoming
+├── options
+├── updates
+└── uploaders
+```
 
 -   distributions : contient la configuration de chaque distribution, voici un exemple de configuration, les points importants sont commentés :
 
-`Origin: proformatique.com`
-`# description de la suite`
-`Label: lenny-xivo-gallifrey`
-`Suite: lenny-xivo-gallifrey`
-`Codename: lenny-xivo-gallifrey`
-`# les différentes archi disponibles`
-`Architectures: i386 source`
-`# les composants disponible`
-`Components: main non-free`
-`# le miroir sur lequel se synchroniser (cf update dans le même paragraphe)`
-`Update: lenny-xivo-gallifrey-rc`
-`# on peut préciser que l'on veut synchroniser une suite sur plusieurs miroirs de  la manière suivante :`
-`# Update: lenny-xivo-gallifrey-farm-main lenny-xivo-gallifrey-farm-non-free, il devra y avoir deux déclarations dans le fichier update`
-`Description: Archive lenny-xivo-gallifrey`
-`# avec quelle clé signer les paquets (indispensable pour que apt ne râle pas)`
-`SignWith: 9193E98C`
+```
+Origin: proformatique.com
+# description de la suite
+Label: lenny-xivo-gallifrey
+Suite: lenny-xivo-gallifrey
+Codename: lenny-xivo-gallifrey
+# les différentes archi disponibles
+Architectures: i386 source
+# les composants disponible
+Components: main non-free
+# le miroir sur lequel se synchroniser (cf update dans le même paragraphe)
+Update: lenny-xivo-gallifrey-rc
+# on peut préciser que l'on veut synchroniser une suite sur plusieurs miroirs de  la manière suivante :
+# Update: lenny-xivo-gallifrey-farm-main lenny-xivo-gallifrey-farm-non-free, il devra y avoir deux déclarations dans le fichier update
+Description: Archive lenny-xivo-gallifrey
+# avec quelle clé signer les paquets (indispensable pour que apt ne râle pas)
+SignWith: 9193E98C
+```
 
 -   incoming : configuration du répertoire dans lequel les nouveaux packages seront stockés avant validation (cf upload de paquet plus bas) :
 
-`Name: lenny-xivo-gallifrey`
-`IncomingDir: incoming/lenny-xivo-gallifrey`
-`TempDir: /tmp`
-`Allow: lenny-xivo-gallifrey`
-`Default: lenny-xivo-gallifrey`
-`Cleanup: on_deny on_error`
+```
+Name: lenny-xivo-gallifrey
+IncomingDir: incoming/lenny-xivo-gallifrey
+TempDir: /tmp
+Allow: lenny-xivo-gallifrey
+Default: lenny-xivo-gallifrey
+Cleanup: on_deny on_error
+```
 
 -   options : les options globales de configuration :
 
-`verbose`
-`basedir /data/reprepro/xivo`
-`ignore undefinedtarget`
+```
+verbose
+basedir /data/reprepro/xivo
+ignore undefinedtarget
+```
 
 -   update : ce fichier est important. C'est en effet ici que nous allons définir comment se synchroniser sur un miroir distant ou local :
 
-`Name: lenny-xivo-gallifrey-rc`
-`Method: `[`http://mirror.wazo.community/debian/`](http://mirror.wazo.community/debian/)
-`Suite: lenny-xivo-gallifrey-rc`
-`Components: main non-free`
-`Architectures: i386 source`
-`VerifyRelease: B33A50859193E98C`
+```
+Name: lenny-xivo-gallifrey-rc
+Method: http://mirror.wazo.community/debian
+Suite: lenny-xivo-gallifrey-rc
+Components: main non-free
+Architectures: i386 source
+VerifyRelease: B33A50859193E98C
+```
 
 -   uploaders : les personnes autorisées a publier des paquets sur le miroir (en utilisant dput par exemple) :
 
-`allow * by key 780450F7`
-`allow * by key 4EFADA39`
-`allow * by key FB075CEF`
+```
+allow * by key 780450F7
+allow * by key 4EFADA39
+allow * by key FB075CEF
+```
 
 #### reprepro cheat sheet
 
