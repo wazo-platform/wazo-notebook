@@ -1,3 +1,5 @@
+- 19.07 : 1
+  - total, filtered érronés dans chatd
 - 19.06 : 2
   - manque 1 ACL pour la configuration des auth externe sur l'admin policy
   - LDAP AD: impossible de configurer le unique_field_format en binary_uuid
