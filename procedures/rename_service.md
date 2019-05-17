@@ -25,6 +25,7 @@
 * swagger-doc
 * monitoring
 * ansible
+* wazo-auth-keys
 * wazo-acceptance
 * jenkins job
    * `<service-name>`
