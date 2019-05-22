@@ -29,7 +29,7 @@ In the directory containing all repos:
 
 * Rename xivo-upgrade to wazo-upgrade
 
-## dird
+## wazo-dird
 
 * Remove tenant.name
 * Remove migration plugin + upgrade
@@ -37,3 +37,7 @@ In the directory containing all repos:
 ## ISO
 
 * virtualenv python3
+
+## wazo-service
+
+* remove `xivo_home` and `xivo_disabled_file` variables and logic
