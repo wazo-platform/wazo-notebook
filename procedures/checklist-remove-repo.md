@@ -5,5 +5,6 @@ Note: If you update this document, please also update checklist-add-repo.md, if 
 - xivo-build-tools: remove repo from etc/packages
 - Github: remove repo
 - Docker Hub: remove image
-- mirror: remove package
+- Debian repo: remove package
+- upgrade: purge package
 - Notify other developers
