@@ -1,3 +1,4 @@
+- 19.08 : 0
 - 19.07 : 1
   - total, filtered érronés dans chatd
 - 19.06 : 2
