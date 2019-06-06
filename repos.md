@@ -10,7 +10,7 @@ General rule: one repo per Debian package
 - `asterisk-*`: Variants of Asterisk package (debug, without patches, etc.)
 
 - `*-packaging`: Debian packaging repos, for libraries/software not yet packaged by Debian
-- `*-client`: Python libraries for using REST API, e.g. xivo-confd-client is a library for the REST API provided by the daemon xivo-confd
+- `*-client`: Python libraries for using REST API, e.g. wazo-confd-client is a library for the REST API provided by the daemon xivo-confd
 - `*-cli`: CLI tools for using REST API, e.g. xivo-agentd-cli is a CLI tool for interacting with the REST API provided by the daemon xivo-agentd. The CLI tools use the `*-client` library.
 - others: forks, older packaging repos, misc tools
 
