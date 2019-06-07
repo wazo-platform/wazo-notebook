@@ -14,7 +14,7 @@
     * system user
 * Docker image names `wazopbx/<service-name>`
   * remove old image from docker hub
-* xivo: debian control depends
+* wazo-platform: debian control depends
 * xivo-backup
 * xivo-service
 * xivo-build-tools
