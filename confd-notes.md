@@ -6,13 +6,13 @@ Varia
 -----
 
  * Ajouter des "enabled" partout
-   * Exposer les commented dans l'api rest 
+   * Exposer les commented dans l'api rest
  * Déplacer "voicemail_enabled" dans la ressource user-
    * ~~voicemail_enabled dans association user-voicemail -> user~~
  * ~~Mettre toutes les ressources au pluriel~~
    * ~~ex: /extensions/id/line  -> lines~~
  * ~~Migrer les anciens plugins au nouveau~~
-   * ~~xivo_confd/resources dans xivo_confd/plugins~~
+   * ~~wazo_confd/resources dans wazo_confd/plugins~~
  * Séparer les notions de charger un API REST vs charger un service dans un plugin
    * ex: creer le service de device une seule fois dans le demon
  * ~~remplacer les anciens POST d'association par des PUT~~
