@@ -23,4 +23,4 @@ The file should be like:
 ```
 * `systemctl restart rabbitmq-server.service`
 
-Now you can go to http://<ip>:15672
+* Now you can go to `http://<ip>:15672`
