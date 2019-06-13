@@ -6,7 +6,7 @@
 
 * Add the following line to `/etc/rabbitmq/rabbitmq.config`:
   ```
-  {loopback_users, []
+  {loopback_users, []}
   ```
 
   The file should be like:
