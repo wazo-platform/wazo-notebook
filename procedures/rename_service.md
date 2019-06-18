@@ -19,7 +19,7 @@
 * xivo-service
 * xivo-build-tools
 * xivo-tools: repo list
-* xivo-utils : wazo-reset
+* xivo-utils: wazo-reset
 * xivo-upgrade: purge old package
 * wazo-doc
 * swagger-doc
@@ -31,3 +31,4 @@
    * `<service-name>`
    * `daily-integration-tests`
 * translations
+* wazo-sdk: project.yml
