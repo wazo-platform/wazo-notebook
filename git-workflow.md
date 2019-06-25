@@ -17,7 +17,9 @@
   * fetch PR locally with 
 
 		git pull-request --download <PR-number>
-* [coming soon] if valid add `mergeit` label to trigger zuul
+
+* Once PR is valid, "Approve" it (in review tab)
+* if valid add `mergeit` label to trigger zuul
 * [coming soon] zuul will run test and merge if tests pass.
 
 
