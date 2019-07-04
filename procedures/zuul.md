@@ -13,4 +13,8 @@
 
 - add the `mergeit` label for the PR.
 - review the change.
-- zuul will merge automatically
+- Zuul will merge the PR automatically.
+
+## Details
+
+- See the [definition of the Zuul pipeline](https://github.com/wazo-pbx/sf-config/blob/master/zuul.d/_pipelines.yaml#L46-L56) for the exact requirements for Zuul to merge a PR.
