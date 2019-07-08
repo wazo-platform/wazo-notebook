@@ -1,4 +1,4 @@
-Note: If you update this document, please also update checklist-remove-repo.md, if applicable
+Note: If you update this document, please also update [checklist-remove-repo.md](checklist-remove-repo.md), if applicable
 
 Note2: See [zuul integration](zuul.md)
 
