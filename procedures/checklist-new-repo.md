@@ -1,14 +1,16 @@
 Note: If you update this document, please also update checklist-remove-repo.md, if applicable
 
+Note2: See [zuul integration](zuul.md)
+
 - Create repo on Github
 - In the repo's settings, add a webhook
-  - Payload URL: 
+  - Payload URL:
     - open source code: `https://jenkins.wazo.community/github-webhook/`
     - private code: `https://jenkins.wazo.io/github-webhook/`
   - Content Type: `x-www-form-urlencoded`
   - Secret: none
-  - Select trigger events: 
-    - `Pushes`, 
+  - Select trigger events:
+    - `Pushes`,
     - `Pull requests`
 
 OR
