@@ -9,18 +9,19 @@
 
 ## Reviewing and validating pull request
 
-### How to do it?
-
-* set JIRA ticket to `in review`
-* assign to someone, self-assign or add _:pray:`please review`_
-* review, at least one, by someone who don't write the code
-  * fetch PR locally with 
+* PR owner: set JIRA ticket to `in review`
+* PR owner: assign to someone, self-assign or add _:pray:`please review`_
+* Reviewer: review the PR on Github
+  * There must be at least one reviewer. Reviewers may request other reviewers.
+  * Reviewers should not have written code in the PR
+  * Fetch PR locally:
 
 		git pull-request --download <PR-number>
 
-* Once PR is valid, "Approve" it (in review tab)
-* if valid add `mergeit` label to trigger zuul
-* [coming soon] zuul will run test and merge if tests pass.
+* Reviewer: once the PR is reviewed and approved, "Approve" it on Github (in Review tab)
+* Reviewer: add the `mergeit` label to trigger Zuul
+* [coming soon] Zuul: run tests and merge (if tests pass).
+* [while !Zuul] Reviewer: merge the PR manually
 
 
 ## Merging Strategies
