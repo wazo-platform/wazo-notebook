@@ -7,6 +7,22 @@
 * Choose a merging strategy (cf. below) based on your context ;
 * Tags: Each release of Wazo must be tagged in applicable repositories. Tags must be PGP-signed.
 
+## Reviewing and validating pull request
+
+### How to do it?
+
+* set JIRA ticket to `in review`
+* assign to someone, self-assign or add _:pray:`please review`_
+* review, at least one, by someone who don't write the code
+  * fetch PR locally with 
+
+		git pull-request --download <PR-number>
+
+* Once PR is valid, "Approve" it (in review tab)
+* if valid add `mergeit` label to trigger zuul
+* [coming soon] zuul will run test and merge if tests pass.
+
+
 ## Merging Strategies
 
 read: [Git Merge vs. Rebase: What’s the Diff?](https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333), [Github: About pull request merges](https://help.github.com/en/articles/about-pull-request-merges#rebase-and-merge-your-pull-request-commits).
