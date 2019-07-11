@@ -15,6 +15,11 @@
 - review the change.
 - Zuul will merge the PR automatically.
 
+## How to write a new job in Zuul
+
+- add the job definition in [sf-jobs/zuul.d/wazo.yaml](https://github.com/wazo-pbx/sf-jobs/blob/master/zuul.d/wazo.yaml)
+  - Job parents available in Software Factory: [openstack-infra/zuul-jobs](https://github.com/openstack-infra/zuul-jobs/tree/master/roles)
+
 ## Details
 
 - See the [definition of the Zuul pipeline](https://github.com/wazo-pbx/sf-config/blob/master/zuul.d/_pipelines.yaml#L46-L56) for the exact requirements for Zuul to merge a PR.
