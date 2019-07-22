@@ -4,7 +4,7 @@
   * `/etc/<service-name>`
   * `/var/run/<service-name>/<service-name>.pid`
   * `/var/log/<service-name>.log`
-  * root package in the source code `<service_name>` 
+  * root package in the source code `<service_name>`
   * Source directory in Dockerfile `/usr/src/<service-name>`
   * Debian package name
     * debian/control

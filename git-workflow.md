@@ -37,7 +37,7 @@ Branches should be [rebased before merging](https://help.github.com/en/articles/
 ### Merge
 
 Branches across multiple repositories should be merged using a merge commit (not fast-forward).
- 
+
 * Benefits:
   * finding more easily which commits belonged to which feature-branch.
   * knowing who reviewed and merged the feature-branch
