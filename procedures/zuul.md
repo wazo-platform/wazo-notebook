@@ -29,7 +29,7 @@
 ### Problem building an image
 
 * Check `/var/log/nodepool`
-* Check `/var/www/nodepool`
+* Check `/var/www/nodepool-log`
 
 ### My dependency in `bindep.txt` is not installed
 
