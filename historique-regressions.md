@@ -1,3 +1,5 @@
+- 19.11 : 1
+  - Génération des call-logs bloqué (thread bus meurt)
 - 19.10 : 0
 - 19.09 : 0
 - 19.08 : 0
