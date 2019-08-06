@@ -21,6 +21,7 @@
   * `dev-tools/repos/shortlog`
 * wazo-doc
 * wazo-ansible
+* Github repository
 * Jenkins job
    * `<package-name>`
    * `daily-integration-tests`
@@ -29,6 +30,17 @@
 * wazo-acceptance
 * wazo-sdk
   * `project.yml`
+* Debian dependencies for other packages
+* requirements.txt for other packages
+* Remove old package from wazo-dev-stretch distribution
+* announce to other devs so that they can update their local repo
+  * `git remote set-url origin git@github.com:wazo-pbx/<new-name>`
+
+Note: the following items are linked and must be renamed at the same time (or the build will fail):
+* Debian package name
+* xivo-build-tools
+* Github repo name
+* Jenkins job name
 
 ## Service repository
 
