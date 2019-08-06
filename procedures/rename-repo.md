@@ -47,9 +47,9 @@
   * `debian/control`: Depends
 * xivo-backup
 * xivo-service
-* xivo-utils: wazo-reset
+* xivo-utils:
+  * `/sbin/wazo-reset`
 * xivo-swagger-doc
-  * `debian/control`: Depends
 * monitoring
 * wazo-auth-keys
 * translations
