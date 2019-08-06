@@ -13,7 +13,8 @@
   * `debian/<package-name>.*`
 * xivo-build-tools
   * `etc/xivo-build-tools/packages`
-* xivo-upgrade: purge old package
+* xivo-upgrade:
+  * purge old package
 * xivo-tools:
   * `dev-tools/repos/python-tag`
   * `dev-tools/repos/all`
