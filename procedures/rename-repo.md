@@ -1,14 +1,14 @@
 # Renaming a git repository
 
-## Common
+## All repositories
 
-* `<repository-name>`
+* Files
   * all files/import in the package
 * Debian package name
   * `debian/control`
     * add Provides, Conflicts and Replaces for the former name
   * `debian/changelog`
-    * remove "clean" version numbers "8:18.05..." -> "18.05..."
+    * clean version numbers: "8:18.05..." -> "18.05..."
     * add a changelog entry stating the rename
   * `debian/<package-name>.*`
 * xivo-build-tools
@@ -21,7 +21,7 @@
   * `dev-tools/repos/shortlog`
 * wazo-doc
 * wazo-ansible
-* jenkins job
+* Jenkins job
    * `<package-name>`
    * `daily-integration-tests`
 * sf-config
@@ -30,9 +30,9 @@
 * wazo-sdk
   * `project.yml`
 
-## Service
+## Service repository
 
-* `<service-name-repository>`
+* Files
   * `/etc/<service-name>`
   * `/var/run/<service-name>/<service-name>.pid`
   * `/var/log/<service-name>.log`
@@ -40,7 +40,7 @@
   * Source directory in Dockerfile `/usr/src/<service-name>`
 * Debian package name
   * `debian/<package-name>.postinst`:
-    * rename log files
+    * rename log files, including rotated log files
   * system user
 * Docker image names `wazopbx/<service-name>`
   * remove old image from docker hub
@@ -49,8 +49,8 @@
 * xivo-backup
 * xivo-service
 * xivo-utils:
-  * `/sbin/wazo-reset`
+  * `sbin/wazo-reset`
 * xivo-swagger-doc
-* monitoring
+* xivo-monitoring
 * wazo-auth-keys
-* translations
+* Translations
