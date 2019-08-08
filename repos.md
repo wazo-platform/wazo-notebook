@@ -38,7 +38,7 @@ General rule: one repo per Debian package
 - [kvm](https://github.com/wazo-pbx/kvm): Tool for deploying Wazo servers on KVM hypervisors
 - [lordboard](https://github.com/wazo-pbx/lordboard): Web interface reporting tests executed in a Testlink test plan
 - [wazo-libtestlink](https://github.com/wazo-pbx/wazo-libtestlink): Python library for interacting with Testlink
-- [wazo-market](https://github.com/wazo-pbx/wazo-market): Database of Wazo plugins (different from provisioning plugins, see xivo-provd-plugins)
+- [wazo-market](https://github.com/wazo-pbx/wazo-market): Database of Wazo plugins (different from provisioning plugins, see wazo-provd-plugins)
 - [wazo-sdk](https://github.com/wazo-pbx/wazo-sdk): Tools for developers
 - [xgong](https://github.com/wazo-pbx/xgong): Tool for interconnecting Jenkins with Asterisk (e.g. with an intercom)
 - [xivo-build-tools](https://github.com/wazo-pbx/xivo-build-tools): Builder for Debian packages
