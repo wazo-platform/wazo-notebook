@@ -59,7 +59,7 @@ Note: the following items are linked and must be renamed at the same time (or th
 * wazo-platform
   * `debian/control`: Depends
 * xivo-backup
-* xivo-service
+* wazo-service
 * xivo-utils:
   * `sbin/wazo-reset`
 * xivo-swagger-doc
