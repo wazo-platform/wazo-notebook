@@ -11,6 +11,8 @@
     * clean version numbers: "8:18.05..." -> "18.05..."
     * add a changelog entry stating the rename
   * `debian/<package-name>.*`
+* wazo-platform
+  * `debian/control`: Depends
 * xivo-build-tools
   * `etc/xivo-build-tools/packages`
 * xivo-upgrade:
@@ -56,8 +58,6 @@ Note: the following items are linked and must be renamed at the same time (or th
   * system user
 * Docker image names `wazopbx/<service-name>`
   * remove old image from docker hub
-* wazo-platform
-  * `debian/control`: Depends
 * xivo-backup
 * wazo-service
 * xivo-utils:
