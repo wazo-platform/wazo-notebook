@@ -1,3 +1,6 @@
+- 19.12 : 2
+  - (SI) build ISO brisé par la clé de downloads changé par cloud-init
+  - Call logs sur push mobile
 - 19.11 : 1
   - Génération des call-logs bloqué (thread bus meurt)
 - 19.10 : 0
