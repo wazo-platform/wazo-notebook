@@ -36,7 +36,7 @@
 * requirements.txt for other packages
 * Remove old package from wazo-dev-stretch distribution
 * announce to other devs so that they can update their local repo
-  * `git remote set-url origin git@github.com:wazo-pbx/<new-name>`
+  * `git remote set-url origin git@github.com:wazo-platform/<new-name>`
 
 Note: the following items are linked and must be renamed at the same time (or the build will fail):
 * Debian package name

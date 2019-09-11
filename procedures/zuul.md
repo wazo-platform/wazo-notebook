@@ -2,12 +2,12 @@
 
 ## How to add a new github repository under Zuul monitoring
 
-- make a PR to modify wazo-pbx/sf-config to change the file
-  [resources/resources.yaml](https://github.com/wazo-pbx/sf-config/blob/master/resources/resources.yaml) to add the targeted repository in the
+- make a PR to modify wazo-platform/sf-config to change the file
+  [resources/resources.yaml](https://github.com/wazo-platform/sf-config/blob/master/resources/resources.yaml) to add the targeted repository in the
   source-repositories section.
 - enable [branch protection](https://zuul.wazo.community/docs/user/zuul_user.html#zuul-github-branch-protection) on your repo
 - create the `mergeit` label for the repository.
-- create a PR to add a `zuul.conf` file like in [wazo-pbx/wazo-webhookd](https://github.com/wazo-pbx/wazo-webhookd/blob/master/zuul.yaml)
+- create a PR to add a `zuul.conf` file like in [wazo-platform/wazo-webhookd](https://github.com/wazo-pbx/wazo-webhookd/blob/master/zuul.yaml)
 
 ## How to merge a PR using Zuul
 
@@ -19,19 +19,24 @@
 
 - if the job is specific to this repo, add it directly in the repo
   - create `pre.yaml` and `run.yaml`
-  - see [wazo-ansible](https://github.com/wazo-pbx/wazo-ansible) as an example
-- if the job is reusable elsewhere, add the job definition in [sf-jobs/zuul.d/wazo.yaml](https://github.com/wazo-pbx/sf-jobs/blob/master/zuul.d/wazo.yaml)
+  - see [wazo-ansible](https://github.com/wazo-platform/wazo-ansible) as an example
+- if the job is reusable elsewhere, add the job definition in [sf-jobs/zuul.d/wazo.yaml](https://github.com/wazo-platform/sf-jobs/blob/master/zuul.d/wazo.yaml)
   - Job parents available in Software Factory: [openstack-infra/zuul-jobs](https://github.com/openstack-infra/zuul-jobs/tree/master/roles)
 
 Notes:
 
-- the `pre` stage is aimed at configuring the environment for running a test. On failure, retry at most 3 times.
+- the `pre-run` stage is aimed at configuring the environment for running a test. On failure, retry at most 3 times.
 - the `run` stage is aimed at running the test. On failure, stop everything and report.
-
+- the `post-run` stage is aimed at collecting logs and artifacts.
 
 ## Details
 
-- See the [definition of the Zuul pipeline](https://github.com/wazo-pbx/sf-config/blob/master/zuul.d/_pipelines.yaml#L46-L56) for the exact requirements for Zuul to merge a PR.
+- See the [definition of the Zuul pipeline](https://github.com/wazo-platform/sf-config/blob/master/zuul.d/_pipelines.yaml#L46-L56) for the exact requirements for Zuul to merge a PR.
+
+## Images
+
+- VM images are defined in [wazo-platform/sf-config/nodepool/elements/virt-customize](https://github.com/wazo-pbx/sf-config/tree/master/nodepool/elements/virt-customize).
+- runc container images are defined in [wazo-platform/sf-config/nodepool/runC](https://github.com/wazo-pbx/sf-config/tree/master/nodepool/runC).
 
 ## Debugging
 
