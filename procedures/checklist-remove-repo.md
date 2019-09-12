@@ -5,7 +5,7 @@ Note: If you update this document, please also update checklist-add-repo.md, if 
 - xivo-build-tools: remove repo from etc/packages
 - Github: remove repo
 - Docker Hub: remove image
-- Debian distro wazo-dev-stretch: remove package
+- Debian distro wazo-dev-buster: remove package
 - Debian distro nestbox: remove package even for wazo package
 - upgrade: purge package
 - Notify other developers

@@ -34,7 +34,7 @@
   * `project.yml`
 * Debian dependencies for other packages
 * requirements.txt for other packages
-* Remove old package from wazo-dev-stretch distribution
+* Remove old package from wazo-dev-buster distribution
 * announce to other devs so that they can update their local repo
   * `git remote set-url origin git@github.com:wazo-platform/<new-name>`
 
