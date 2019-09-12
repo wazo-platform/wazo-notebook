@@ -32,3 +32,9 @@ LABEL maintainer="Wazo Maintainers <dev@wazo.community>"
 ```
 dev+tests-reports@wazo.community
 ```
+
+## AUTHORS
+
+```
+Wazo Communication Inc.
+```
