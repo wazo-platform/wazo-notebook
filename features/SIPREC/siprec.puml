@@ -1,0 +1,44 @@
+@startuml
+
+hide footbox
+title Processus SIPREC
+
+actor UA_A #red
+participant "Session Recording\nClient" as SRC
+actor UA_B
+database "Session Recording\nServer" as SRS
+
+== Initialisation de la communication ==
+UA_A -[#blue]> SRC: INVITE avec SDP
+SRC -[#blue]> UA_B: INVITE avec SDP
+UA_B -[#blue]> SRC : 200 OK
+SRC -[#blue]> UA_A : 200 OK
+
+UA_A -[#green]> UA_B : RTP
+UA_B -[#green]> UA_A : RTP
+
+group processus SIPSRS
+    SRC --> SRS : INVITE avec SDP (metada + tag SRC + SDP 2 m-lines)
+    SRS --> SRC : 200 OK avec SDP (tag SRS + option : SDP inactif)
+
+    SRC -[#green]>o SRS : RTP
+    SRC -[#green]>o SRS : RTP
+
+    SRS --> SRC : RE-INVITE / UPDATE  (REC only / inactive)
+    SRC --> SRS : 200 OK
+end
+
+... durée de la communication ...
+
+== Fin de la communication ==
+UA_A -[#blue]> SRC: BYE
+SRC -[#blue]> UA_B: BYE
+UA_B -[#blue]> SRC : 200 OK
+SRC -[#blue]> UA_A : 200 OK
+
+group processus SIPREC
+    SRC --> SRS: BYE
+    SRS --> SRC : 200 OK
+end
+
+@enduml
