@@ -1,0 +1,81 @@
+@startuml
+
+hide footbox
+title Wazo : incoming communication (DID)
+
+actor Caller as C #white
+
+box "Wazo"
+participant "Wazo Platform" as TP
+participant "Wazo conference system" as TC
+endbox
+
+box "Customer"
+participant "Customer Backend" as CB
+endbox
+
+box "Customer Fontend"
+participant "Customer Frontend" as CF
+participant "Wazo SDK" as TS
+endbox
+
+actor "Agent" as A #blue
+
+
+== Communication initiation : incoming call ==
+C -[#Blue]> TP : New call to DID
+TP ---> CB : HTTP Webhook Call (Action to do ?)
+CB --->o CB : Search DID destination from To information (E.164 number)
+CB ---> TP : HTTP Response (TwiML document) - Action : Call -> Conference with new_ID
+hnote over CB : idle
+...
+C -[#Blue]> TC : Join the conference
+...
+TP ---> CB : HTTP Webhook Call (conference status : participant-join)
+
+== Bridging agent in conference ==
+CB ---> TP : API Call (Add new agent in conference)
+hnote over CB : idle
+...
+
+TP -[#Red]> CF : JS Event incoming call (don't accept)
+CB o-[#Purple]>o CF : Websocket : new call notification
+
+CF -[#Blue]> A : Ringing
+
+hnote over A : waiting for agent's action
+...
+A -[#Blue]> CF : Accept call
+TS -[#Red]> CF : JS event "Connection.accept" Accepting call
+hnote over CF : idle
+hnote over CB : idle
+...
+A -[#Blue]> TC : Join the conference
+...
+TP ---> CB : HTTP Webhook Call (conference event : participant-join)
+
+CB o-[#Purple]>o CF : Websocket : update state of call (answered)
+
+C <-[#Green]> A : RTP flows
+
+... Caller and Agent in call ...
+
+== Communication end ==
+
+C -[#Blue]> TC : End of call (Could also be the Agent)
+
+TP ---> CB : HTTP Webhook Call (conference event : participant-leave)
+CB ---> TP : API Call : End of conference (update-a-conference-resource)
+hnote over CB : idle
+...
+TP ---> CB : HTTP Webhook Call (conference event : conference-end)
+...
+TC -[#Blue]> A : End of call
+TP ---> CB : HTTP Webhook Call (conference event : participant-leave)
+CB o-[#Purple]>o CF : Update state of call (ended)
+
+...
+TP ---> CB : HTTP Webhook Call (conference event : conference-record-end with info's record)
+
+
+@enduml
