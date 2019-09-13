@@ -15,7 +15,7 @@
   * `debian/control`: Depends
 * xivo-build-tools
   * `etc/xivo-build-tools/packages`
-* xivo-upgrade:
+* wazo-upgrade:
   * purge old package
 * xivo-tools:
   * `dev-tools/repos/python-tag`
