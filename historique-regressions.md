@@ -1,3 +1,10 @@
+- 19.13 : 6 (Buster release, first public release since 18.03)
+  - RabbitMQ upgrade fail
+  - Provd cron /bin/bash
+  - wazo-auth memory leak
+  - upgrade from 18.01
+  - service started with the wrong kombu version
+  - wazo-amid conf.d gone
 - 19.12 : 2
   - (SI) build ISO brisé par la clé de downloads changé par cloud-init
   - Call logs sur push mobile
