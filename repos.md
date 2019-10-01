@@ -24,7 +24,7 @@ General rule: one repo per Debian package
 - [wazo-js-sdk](https://github.com/wazo-platform/wazo-js-sdk): Library for Javascript applications using Wazo REST APIs.
 - [wazo-logo](https://github.com/wazo-platform/wazo-logo): Collection of Wazo logos
 - [wazo-notebook](https://github.com/wazo-platform/wazo-notebook): Collection of text files for documentation too specific to be written in wazo-doc
-- [wazo-platform.github.io](https://github.com/wazo-pbx/wazo-pbx.github.io): Website exposed on http://wazo.community
+- [wazo-platform.github.io](https://github.com/wazo-platform/wazo-pbx.github.io): Website exposed on http://wazo.community
 - [wazo-react-components](https://github.com/wazo-platform/wazo-react-components): React.JS components that can be used in Javascript applications
 - [xivo-blog](https://github.com/wazo-platform/xivo-blog): Blog exposed on http://blog.wazo.community
 - [xivo-migration-scripts](https://github.com/wazo-platform/xivo-migration-scripts): Wazo install scripts exposed on http://mirror.wazo.community/fai/xivo-migration

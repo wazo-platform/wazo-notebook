@@ -7,7 +7,7 @@
   source-repositories section.
 - enable [branch protection](https://zuul.wazo.community/docs/user/zuul_user.html#zuul-github-branch-protection) on your repo
 - create the `mergeit` label for the repository.
-- create a PR to add a `zuul.conf` file like in [wazo-platform/wazo-webhookd](https://github.com/wazo-pbx/wazo-webhookd/blob/master/zuul.yaml)
+- create a PR to add a `zuul.conf` file like in [wazo-platform/wazo-webhookd](https://github.com/wazo-platform/wazo-webhookd/blob/master/zuul.yaml)
 
 ## How to merge a PR using Zuul
 
@@ -35,8 +35,8 @@ Notes:
 
 ## Images
 
-- VM images are defined in [wazo-platform/sf-config/nodepool/elements/virt-customize](https://github.com/wazo-pbx/sf-config/tree/master/nodepool/elements/virt-customize).
-- runc container images are defined in [wazo-platform/sf-config/nodepool/runC](https://github.com/wazo-pbx/sf-config/tree/master/nodepool/runC).
+- VM images are defined in [wazo-platform/sf-config/nodepool/elements/virt-customize](https://github.com/wazo-platform/sf-config/tree/master/nodepool/elements/virt-customize).
+- runc container images are defined in [wazo-platform/sf-config/nodepool/runC](https://github.com/wazo-platform/sf-config/tree/master/nodepool/runC).
 
 ## Debugging
 
