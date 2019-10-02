@@ -63,3 +63,13 @@ Notes:
 * Check the node IP at the beginning of job output
 * From `root@zuul.wazo.community`
     * `ssh zuul-worker@<zuul_node_ip> -i /var/lib/software-factory/bootstrap-data/ssh_keys/zuul_rsa`
+
+### Keep node running after job end
+* Check the `job_id` from the URL of the job ouput.
+    ex: `https://zuul.wazo.community/zuul/t/local/stream/9eecc3177cbb45d39d9aeb5430146a34?logfile=console.log`
+        The `job_id` is `9eecc3177cbb45d39d9aeb5430146a34`
+* From `root@zuul.wazo.community`
+    * `zuul autohold --tenant local --project wazo-platform/<repository> --job <job_id> --reason debug`
+    * Do what you want to do and delete node after
+    * `nodepool list | grep <zuul_node_ip>`
+    * `nodepool delete <node_id>`
