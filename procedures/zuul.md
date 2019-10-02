@@ -58,3 +58,8 @@ Notes:
 
 * `zuul show`
 * `nodepool list`
+
+### SSH node
+* Check the node IP at the beginning of job output
+* From `root@zuul.wazo.community`
+    * `ssh zuul-worker@<zuul_node_ip> -i /var/lib/software-factory/bootstrap-data/ssh_keys/zuul_rsa`
