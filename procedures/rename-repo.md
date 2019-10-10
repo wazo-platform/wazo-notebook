@@ -48,7 +48,7 @@ Note: the following items are linked and must be renamed at the same time (or th
 
 * Files
   * `/etc/<service-name>`
-  * `/var/run/<service-name>/<service-name>.pid`
+  * `/run/<service-name>/<service-name>.pid`
   * `/var/log/<service-name>.log`
   * root package in the source code `<service_name>`
   * Source directory in Dockerfile `/usr/src/<service-name>`
