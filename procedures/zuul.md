@@ -73,3 +73,9 @@ Notes:
     * Do what you want to do and delete node after
     * `nodepool list | grep <zuul_node_ip>`
     * `nodepool delete <node_id>`
+
+### Removing a dandling job
+
+* From `root@zuul.wazo.community`
+    * `zuul dequeue --tenant local --pipeline <pipeline> --project <project> --change <pr number>,<sha1>`
+    * For example: `zuul dequeue --tenant local --pipeline check --project wazo-platform/wazo-websocketd --change 8,e2680cb6eac37de5b63710c3427261ffd38e18a9`
