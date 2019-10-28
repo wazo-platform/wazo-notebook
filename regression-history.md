@@ -1,3 +1,16 @@
+# Regression history
+
+## About
+
+This document lists the regressions found during the manual testing session of
+Wazo Platform.
+
+The point is to keep trace of how useful this manual testing session is.
+Eventually, if no regressions are found for a sufficient period, it will mean
+that automated tests are reliable enough to abandon the manual testing session.
+
+## Regressions
+
 - 19.15 : 1
   - wazo-agid home directory was not migrated properly
 - 19.14 : 0
