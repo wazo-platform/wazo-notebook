@@ -1,3 +1,5 @@
+- 19.15 : 1
+  - wazo-agid home directory was not migrated properly
 - 19.14 : 0
 - 19.13 : 6 (Buster release, first public release since 18.03)
   - RabbitMQ upgrade fail
