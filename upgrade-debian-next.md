@@ -27,4 +27,11 @@ In the directory containing all repos:
 
 # Specific things to do for bullseye migration
 
-Nothing
+Be careful with the following packages. Since they don't have the `~wazo1` in their version, the
+package version can be bigger than the debian version if the project version is the same:
+
+* `python3-asynqp`
+* `python3-hstspreload`
+* `python3-rfc3986`
+* `python3-sqlalchemy-continuum`
+* `python3-swaggerpy`
