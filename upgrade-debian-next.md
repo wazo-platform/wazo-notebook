@@ -25,19 +25,12 @@ In the directory containing all repos:
     * [upgrade-debian-8](https://github.com/wazo-platform/wazo-notebook/blob/master/upgrade-debian-8.md)
 
 
-# Specific things to do for buster migration
+# Specific things to do for bullseye migration
 
-* Rename xivo-upgrade to wazo-upgrade
+Nothing
+
+# Specific things to do for buster migration
 
 ## wazo-dird
 
 * Remove tenant.name
-* Remove migration plugin + upgrade
-
-## ISO
-
-* virtualenv python3
-
-## wazo-service
-
-* remove `xivo_home` and `xivo_disabled_file` variables and logic
