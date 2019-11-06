@@ -28,9 +28,3 @@ In the directory containing all repos:
 # Specific things to do for bullseye migration
 
 Nothing
-
-# Specific things to do for buster migration
-
-## wazo-dird
-
-* Remove tenant.name
