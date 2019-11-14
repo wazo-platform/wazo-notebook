@@ -11,6 +11,7 @@ that automated tests are reliable enough to abandon the manual testing session.
 
 ## Regressions
 
+- 19.16: 0
 - 19.15 : 1
   - wazo-agid home directory was not migrated properly
 - 19.14 : 0
