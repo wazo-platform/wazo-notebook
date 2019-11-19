@@ -26,6 +26,7 @@
 Notes:
 
 - the `pre-run` stage is aimed at configuring the environment for running a test. On failure, retry at most 3 times.
+  - If you need a package to be installed in the environment, add it to the file `bindep.txt` ([details](https://opendev.org/opendev/bindep))
 - the `run` stage is aimed at running the test. On failure, stop everything and report.
 - the `post-run` stage is aimed at collecting logs and artifacts.
 
