@@ -70,7 +70,7 @@ Notes:
     ex: `https://zuul.wazo.community/zuul/t/local/stream/9eecc3177cbb45d39d9aeb5430146a34?logfile=console.log`
         The `job_id` is `9eecc3177cbb45d39d9aeb5430146a34`
 * From `root@zuul.wazo.community`
-    * `zuul autohold --tenant local --project wazo-platform/<repository> --job <job_id> --reason debug`
+    * `zuul autohold --tenant local --project wazo-platform/<repository> --job <job_id> --reason fblackburn-debug`
     * Do what you want to do and delete node after
     * `nodepool list | grep <zuul_node_ip>`
     * `nodepool delete <node_id>`
