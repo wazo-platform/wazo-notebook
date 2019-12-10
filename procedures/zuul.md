@@ -15,6 +15,16 @@
 * review the change.
 * Zuul will merge the PR automatically.
 
+## How to make a PR depend on another
+
+* Edit the PR description to add the following:
+
+```
+Depends-On: https://github.com/wazo-platform/my-pr
+```
+
+This will block the merging of the PR until the depended on PR is merged.
+
 ## How to write a new job in Zuul
 
 * if the job is specific to this repo, add it directly in the repo
