@@ -21,3 +21,7 @@ Checklist of things to remember when adding a new service to Wazo
 - The REST API is accessible via GET https://wazo/api/<service>
   - Add an entry to the acceptance test: `daily/http/http.feature`
 - The REST API is visible in Swagger
+- The service need to be package on the latest debian stable
+  - If there is dependencies for this service, the dependencies need to be package on debian
+  - The requirements.txt need to have the same dependencies and same version than we have in debian stable
+    - If not, we need to package the version in our repo like the other wazo-<name_dependencies>-packaging
