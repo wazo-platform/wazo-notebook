@@ -18,7 +18,7 @@ Checklist of things to remember when adding a new service to Wazo
 - The service registers with consul for the discovery of services
   - Add an entry to the acceptance test: `daily/service_discovery.feature`
 - The ports used are listed in the doc
-- The REST API is accessible via GET https://wazo/api/<service>
+- The REST API is accessible via GET https://wazo/api/\<service\>
   - Add an entry to the acceptance test: `daily/http/http.feature`
 - The REST API is visible in Swagger
 - The service need to be package on the latest debian stable
