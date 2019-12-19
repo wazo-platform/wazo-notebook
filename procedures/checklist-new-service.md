@@ -17,10 +17,10 @@ Checklist of things to remember when adding a new service to Wazo
 - The backup doc specifies that the files are copied
 - The service registers with consul for the discovery of services
   - Add an entry to the acceptance test: `daily/service_discovery.feature`
-- The ports used are listed in the doc
+- The ports used are listed in the doc and need to be not the default port of dev server.
 - The REST API is accessible via GET `https://wazo/api/<service>`
   - Add an entry to the acceptance test: `daily/http/http.feature`
-- The REST API is visible in Swagger
+- The REST API is visible in openAPI/swagger spec in `<service_root_api>/<version>/api/api.yml`
 - The service need to be package on the latest debian stable
   - If there is dependencies for this service, the dependencies need to be package on debian
   - The requirements.txt need to have the same dependencies and same version than we have in debian stable
