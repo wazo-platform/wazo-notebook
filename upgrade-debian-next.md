@@ -22,7 +22,7 @@ In the directory containing all repos:
 
 * See to-do list from previous upgrade:
 
-    * [upgrade-debian-8](https://github.com/wazo-platform/wazo-notebook/blob/master/upgrade-debian-8.md)
+    * [upgrade-debian-8](upgrade-debian-8.md)
     * [upgrade-debian-10](upgrade-debian-10.md)
 
 
