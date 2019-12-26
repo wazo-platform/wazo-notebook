@@ -38,16 +38,18 @@
 # Arboresence typique des tests d'intégration
 
 - [X] Makefile
-- [ ] Dockerfile-*
+- [ ] docker
+  - [ ] Dockerfile-*
 - [ ] assets/
   - [X] docker-compose.yml: laisser les mount point pour les dépendances commentés
   - [X] docker-compose.*.override.yml: version=3
   - [ ] ssl/
     - [ ] README.md
-    - [ ] openssl.conf
     - [ ] <daemon>/
+      - [ ] openssl.conf
       - [ ] server.crt
   - [ ] daemon_data/
+  - [ ] etc/daemon/
 - [ ] suite/
   - [X] helpers/
     - [ ] base.py
