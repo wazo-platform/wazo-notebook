@@ -19,8 +19,9 @@
 
 		git pull-request --download <PR-number>
 
+* Reviewer: mark all conversations as `resolved` with the decision inside the conversation
 * Reviewer: once the PR is reviewed and approved, "Approve" it on Github (in Review tab)
-* [coming soon] Zuul: run tests and merge (if tests pass).
+* Zuul: run tests and merge (if tests pass).
 * [while !Zuul] Reviewer: merge the PR manually
 
 
