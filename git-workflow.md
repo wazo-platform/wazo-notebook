@@ -10,7 +10,8 @@
 ## Reviewing and validating pull request
 
 * PR owner: set JIRA ticket to `in review`
-* PR owner: assign to someone, self-assign or add _:pray:`please review`_
+* PR owner: add the `mergeit` label to mark the PR as ready to review
+* PR owner: assign to someone, if no JIRA ticket exists
 * Reviewer: review the PR on Github
   * There must be at least one reviewer. Reviewers may request other reviewers.
   * Reviewers should not have written code in the PR
@@ -19,7 +20,6 @@
 		git pull-request --download <PR-number>
 
 * Reviewer: once the PR is reviewed and approved, "Approve" it on Github (in Review tab)
-* Reviewer: add the `mergeit` label to trigger Zuul
 * [coming soon] Zuul: run tests and merge (if tests pass).
 * [while !Zuul] Reviewer: merge the PR manually
 
