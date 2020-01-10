@@ -11,6 +11,9 @@ that automated tests are reliable enough to abandon the manual testing session.
 
 ## Regressions
 
+- 20.01: 2
+  - /usr/share/wazo-upgrade/post-start.d/25-provd-reconfigure-all-devices.py timeout on /lines
+  - MOH stops when doing an attended transfer
 - 19.17: 1
   - DAHDI was removed upon upgrade
 - 19.16: 0
