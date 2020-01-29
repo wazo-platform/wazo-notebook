@@ -23,4 +23,9 @@
   ```
 * `systemctl restart rabbitmq-server.service`
 
+* Give the `management` permission to the user (if not already granted)
+  ```
+  rabbitmqctl set_user_tags my-username administrator
+  ```
+
 * Now you can go to `http://<ip>:15672`
