@@ -11,6 +11,8 @@ that automated tests are reliable enough to abandon the manual testing session.
 
 ## Regressions
 
+- 20.02: 1
+  - API on the dialactions when deleting a user
 - 20.01: 2
   - /usr/share/wazo-upgrade/post-start.d/25-provd-reconfigure-all-devices.py timeout on /lines
   - MOH stops when doing an attended transfer
