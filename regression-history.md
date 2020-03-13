@@ -11,6 +11,7 @@ that automated tests are reliable enough to abandon the manual testing session.
 
 ## Regressions
 
+- 20.04: 0
 - 20.03: 0
 - 20.02: 1
   - API on the dialactions when deleting a user
