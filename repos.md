@@ -27,7 +27,6 @@ General rule: one repo per Debian package
 - [wazo-platform.org](https://github.com/wazo-platform/wazo-platform.org): Website exposed on http://www.wazo-platform.org
 - [wazo-react-components](https://github.com/wazo-platform/wazo-react-components): React.JS components that can be used in Javascript applications
 - [xivo-blog](https://github.com/wazo-platform/xivo-blog): Blog exposed on http://blog.wazo.community
-- [xivo-migration-scripts](https://github.com/wazo-platform/xivo-migration-scripts): Wazo install scripts exposed on http://mirror.wazo.community/fai/xivo-migration
 - [xivo-presentations](https://github.com/wazo-platform/xivo-presentations): Collection of presentations about Wazo
 
 ### Development
