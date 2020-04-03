@@ -11,6 +11,9 @@ that automated tests are reliable enough to abandon the manual testing session.
 
 ## Regressions
 
+- 20.05: 2
+  - Failed to add an upgrade note about SIP transport name change
+  - SCCP channel driver did not load
 - 20.04: 0
 - 20.03: 0
 - 20.02: 1
