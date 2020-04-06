@@ -42,7 +42,3 @@ Branches across multiple repositories should be merged using a merge commit (not
 * Benefits:
   * finding more easily which commits belonged to which feature-branch.
   * knowing who reviewed and merged the feature-branch
-
-## Exceptions
-
-`wazo-doc`: long-lived branch `production` is considered the stable branch, while `master` is considered the development branch, in order for Readthedocs to have two rolling versions.
