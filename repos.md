@@ -19,7 +19,6 @@ General rule: one repo per Debian package
 ### Public-oriented repos
 
 - [sphinx-git](https://github.com/wazo-platform/sphinx-git): Forked Python library to integrate Git logs inside Sphinx-generated docs, used for http://documentation.wazo.community/en/stable/changelog.html#changelog
-- [wazo-doc](https://github.com/wazo-platform/wazo-doc): Documentation exposed on http://documentation.wazo.community
 - [wazo-doc-api](https://github.com/wazo-platform/wazo-doc-api): Wazo REST API documentation exposed on http://developers.wazo.io/ (ReDoc)
 - [wazo-js-sdk](https://github.com/wazo-platform/wazo-js-sdk): Library for Javascript applications using Wazo REST APIs.
 - [wazo-logo](https://github.com/wazo-platform/wazo-logo): Collection of Wazo logos
