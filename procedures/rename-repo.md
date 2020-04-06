@@ -21,7 +21,8 @@
   * `dev-tools/repos/python-tag`
   * `dev-tools/repos/all`
   * `dev-tools/repos/shortlog`
-* wazo-doc
+* wazo-platform.org:
+  * documentation reference
 * wazo-ansible
 * Github repository
 * Jenkins job
