@@ -9,6 +9,7 @@ Note: replace "daemon" with your daemon name
 - [ ] test-requirements.txt: Use .zip archives provided by Github for Git dependencies
 - [ ] bin/: No daemon runners in there, use setup.py:console_scripts instead
 - [ ] templates/: templates that Wazo admins can tweak for their needs.
+- [ ] contribs/: optional scripts and tools
 - [ ] wazo_daemon/
   - [ ] main.py: The main() function that loads configuration and starts the controller (among other things)
   - [ ] config.py: Everything related to daemon configuration
