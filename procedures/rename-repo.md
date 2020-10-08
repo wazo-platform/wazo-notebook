@@ -57,7 +57,7 @@ Note: the following items are linked and must be renamed at the same time (or th
   * `debian/<package-name>.postinst`:
     * rename log files, including rotated log files
   * system user
-* Docker image names `wazopbx/<service-name>`
+* Docker image names `wazoplatform/<service-name>`
   * remove old image from docker hub
 * xivo-backup
 * wazo-service
