@@ -36,3 +36,7 @@ package version can be bigger than the debian version if the project version is 
 * `python3-rfc3986`
 * `python3-sqlalchemy-continuum`
 * `python3-swaggerpy`
+
+# Proposals
+
+* (fblackburn): bump REST API version and remove all deprecated fields/endpoints
