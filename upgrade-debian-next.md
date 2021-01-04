@@ -18,6 +18,13 @@ In the directory containing all repos:
 
 * Merge and clean all alembic migration scripts. (It has never been done before)
 
+## Bump GPG keys expiration
+
+* Builder key
+* Release key for Wazo Platform
+* Secondary release key for Wazo Platform
+* See the wiki
+
 ## Previous upgrade
 
 * See to-do list from previous upgrade:
