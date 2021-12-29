@@ -60,4 +60,4 @@ General rule: one repo per Debian package
 - [xivo-benchmark](https://github.com/wazo-platform/xivo-benchmark): Benchmarking tests
 - [xivo-load-monitor](https://github.com/wazo-platform/xivo-load-monitor): Load-tests monitor interface
 - [xivo-load-tester](https://github.com/wazo-platform/xivo-load-tester): Tests scenarios for load testing
-- [xivo-test-helpers](https://github.com/wazo-platform/xivo-test-helpers): Python library used by integration tests
+- [wazo-test-helpers](https://github.com/wazo-platform/wazo-test-helpers): Python library used by integration tests
