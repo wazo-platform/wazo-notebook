@@ -17,7 +17,7 @@
   * `etc/xivo-build-tools/packages`
 * wazo-upgrade:
   * purge old package
-* xivo-tools:
+* wazo-tools:
   * `dev-tools/repos/python-tag`
   * `dev-tools/repos/all`
   * `dev-tools/repos/shortlog`

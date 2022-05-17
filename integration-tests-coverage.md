@@ -12,7 +12,7 @@ When a query is made
 
 When an insert/update/delete violates integrity rules
 Then the error is logged
-Then the transaction is not locked (see xivo-tools/dev-tools/list-stuck-pg-connections.py)
+Then the transaction is not locked (see wazo-tools/dev-tools/list-stuck-pg-connections.py)
 
 
 REST API
