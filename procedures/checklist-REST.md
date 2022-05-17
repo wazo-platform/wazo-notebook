@@ -18,4 +18,4 @@ Voici quelques points généraux à ne pas oublier. Tous les points ne sont pas 
 - Changelog
   - Documenter quelle version de Wazo provoque quel changement (faute de versioning de l'API)
 - Autres clients
-  - wazo-confd -\> xivo-tools/confd\_client
+  - wazo-confd -\> wazo-tools/confd\_client
