@@ -44,7 +44,7 @@ General rule: one repo per Debian package
 - [xivo-experimental](https://github.com/wazo-platform/xivo-experimental): Collection of experimental tools
 - [xivo-install-cd](https://github.com/wazo-platform/xivo-install-cd): Code for building the ISO image of Wazo
 - [xivo-pjsip](https://github.com/wazo-platform/xivo-pjsip): Documentation for using PJSIP (the latest Asterisk SIP channel) with Wazo
-- [xivo-tools](https://github.com/wazo-platform/xivo-tools): Collection of specific tools for Wazo
+- [wazo-tools](https://github.com/wazo-platform/wazo-tools): Collection of specific tools for Wazo
 
 ### Tests
 
