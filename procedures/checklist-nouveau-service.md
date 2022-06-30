@@ -13,7 +13,7 @@ Checklist des choses à ne pas oublier lors de l'ajout d'un nouveau service à W
 - L'utilisateur du service ne peut pas se loguer
 - L'utilisateur du service n'a pas de /home/user, seulement un /var/lib/user si nécessaire
 - Si le service doit avoir le fichier de conf par défaut de consul, il fait partie du groupe consul
-- Les fichiers de config du service sont copiés par xivo-backup
+- Les fichiers de config du service sont copiés par wazo-backup
 - La doc de backup précise que les fichiers sont copiés
 - Le service s'enregistre auprès de consul pour la découverte de services
   - Ajouter une entrée au test d'acceptance: `daily/service_discovery.feature`
