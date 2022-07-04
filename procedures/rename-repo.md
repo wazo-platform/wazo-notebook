@@ -61,7 +61,7 @@ Note: the following items are linked and must be renamed at the same time (or th
   * system user
 * Docker image names `wazoplatform/<service-name>`
   * remove old image from docker hub
-* xivo-backup
+* wazo-backup
 * wazo-service
 * xivo-utils:
   * `sbin/wazo-reset`
