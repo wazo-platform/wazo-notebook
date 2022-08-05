@@ -19,7 +19,6 @@
   * purge old package
 * wazo-tools:
   * `dev-tools/repos/python-tag`
-  * `dev-tools/repos/all`
   * `dev-tools/repos/shortlog`
 * wazo-platform.org:
   * documentation reference
