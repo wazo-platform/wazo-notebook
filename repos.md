@@ -18,15 +18,11 @@ General rule: one repo per Debian package
 
 ### Public-oriented repos
 
-- [sphinx-git](https://github.com/wazo-platform/sphinx-git): Forked Python library to integrate Git logs inside Sphinx-generated docs, used for http://documentation.wazo.community/en/stable/changelog.html#changelog
 - [wazo-doc-api](https://github.com/wazo-platform/wazo-doc-api): Wazo REST API documentation exposed on http://developers.wazo.io/ (ReDoc)
 - [wazo-js-sdk](https://github.com/wazo-platform/wazo-js-sdk): Library for Javascript applications using Wazo REST APIs.
 - [wazo-logo](https://github.com/wazo-platform/wazo-logo): Collection of Wazo logos
 - [wazo-notebook](https://github.com/wazo-platform/wazo-notebook): Collection of text files for documentation too specific to be written in wazo-platform.org
 - [wazo-platform.org](https://github.com/wazo-platform/wazo-platform.org): Website exposed on http://www.wazo-platform.org
-- [wazo-react-components](https://github.com/wazo-platform/wazo-react-components): React.JS components that can be used in Javascript applications
-- [xivo-blog](https://github.com/wazo-platform/xivo-blog): Blog exposed on http://blog.wazo.community
-- [xivo-presentations](https://github.com/wazo-platform/xivo-presentations): Collection of presentations about Wazo
 
 ### Development
 
@@ -41,14 +37,11 @@ General rule: one repo per Debian package
 - [xgong](https://github.com/wazo-platform/xgong): Tool for interconnecting Jenkins with Asterisk (e.g. with an intercom)
 - [xivo-build-tools](https://github.com/wazo-platform/xivo-build-tools): Builder for Debian packages
 - [xivo-ci](https://github.com/wazo-platform/xivo-ci): Tools used by Jenkins (CI: Continuous Integration)
-- [xivo-experimental](https://github.com/wazo-platform/xivo-experimental): Collection of experimental tools
 - [xivo-install-cd](https://github.com/wazo-platform/xivo-install-cd): Code for building the ISO image of Wazo
-- [xivo-pjsip](https://github.com/wazo-platform/xivo-pjsip): Documentation for using PJSIP (the latest Asterisk SIP channel) with Wazo
 - [wazo-tools](https://github.com/wazo-platform/wazo-tools): Collection of specific tools for Wazo
 
 ### Tests
 
-- [asterisk-lab](https://github.com/wazo-platform/asterisk-lab): Module for Asterisk introducing testing features
 - [chan-test](https://github.com/wazo-platform/chan-test): Simple Asterisk channel used for testing purposes
 - [debian-installer](https://github.com/wazo-platform/debian-installer): Files for automatic Debian installer (FAI: Fully Automated Installer)
 - [mockserver-client-python](https://github.com/wazo-platform/mockserver-client-python): Forked Python library to interact with Mockserver in integration tests
