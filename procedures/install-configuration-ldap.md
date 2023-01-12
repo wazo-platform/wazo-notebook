@@ -14,9 +14,9 @@ et mettre un mot de passe quelconque dont vous allez avoir de besoin lors pour l
 -   Noter votre basedn
 
 ` # slapcat | head -n1`
-` dn: dc=lan-quebec,dc=avencall,dc=com`
+` dn: dc=lan-quebec,dc=wazo,dc=io`
 
-Pour les prochains exemple, on supose que le basedn est "dc=lan-quebec,dc=avencall,dc=com". Remplacer cette valeur par la votre...
+Pour les prochains exemple, on supose que le basedn est "dc=lan-quebec,dc=wazo,dc=io". Remplacer cette valeur par la votre...
 
 À partir de cette étape, vous pouvez soit installer phpldapadmin, soit ajouter manuellement les enregistrement avec ldapadd.
 
@@ -113,9 +113,9 @@ Configuration SSL (ldaps) et StartTLS
 
 ` # /etc/init.d/slapd restart`
 
-#### Client LDAP (le XiVO)
+#### Client LDAP (le Wazo)
 
--   Sur le xivo, ajouter le certificat (\*.crt) dans /usr/local/share/ca-certificates et exécuter update-ca-certificates
+-   Sur le wazo, ajouter le certificat (\*.crt) dans /usr/local/share/ca-certificates et exécuter update-ca-certificates
 
 -   Editer le fichier /etc/ldap/ldap.conf et ajouter:
 
@@ -131,4 +131,4 @@ Configuration SSL (ldaps) et StartTLS
 
 `# openssl x509 -req -days 3090 -in serverkey.pem -signkey serverkey.pem -out servercert.pem`
 
--   Sur le xivo, ajouter le certificat dans /usr/local/share/ca-certificates et exécuter update-ca-certificates
+-   Sur le wazo, ajouter le certificat dans /usr/local/share/ca-certificates et exécuter update-ca-certificates
