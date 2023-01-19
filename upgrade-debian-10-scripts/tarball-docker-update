@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+REQS="requirements.txt test-requirements.txt integration_tests/test-requirements.txt integration_tests/test-requirements-for-tox.txt"
+for r in $REQS; do
+    [ ! -e "$r" ] && continue
+    echo "Patching '$r'..."
+    sed -i 's/master\.zip/buster.zip/g' $r
+    sed -i 's,git+\(https://github.com/wazo-pbx/[^ ]*\).git,\1/archive/buster.zip,' $r
+done
+git commit -m "Update tarballs to buster" -a
+
+if [ -e "Dockerfile" ]; then
+    sed -i -e 's/python:3.5-stretch/python:3.7-buster/' Dockerfile
+    git commit -m "Update dockers to buster" -a
+fi
+
+grep -r '\.data' wazo_* xivo_*
