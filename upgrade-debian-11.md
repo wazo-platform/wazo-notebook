@@ -16,7 +16,7 @@ In the directory containing all repos:
 
 ## Merge DB migration scripts
 
-* Merge and clean all alembic migration scripts.
+* Merge and clean all alembic migration scripts. (It has never been done before)
 
 ## Bump GPG keys expiration
 
@@ -31,7 +31,6 @@ In the directory containing all repos:
 
     * [upgrade-debian-8](upgrade-debian-8.md)
     * [upgrade-debian-10](upgrade-debian-10.md)
-    * [upgrade-debian-11](upgrade-debian-11.md)
 
 
 # Specific things to do for bullseye migration
@@ -39,4 +38,8 @@ In the directory containing all repos:
 Be careful with the following packages. Since they don't have the `~wazo1` in their version, the
 package version can be bigger than the debian version if the project version is the same:
 
+* `python3-asynqp`
+* `python3-hstspreload`
+* `python3-rfc3986`
+* `python3-sqlalchemy-continuum`
 * `python3-swaggerpy`
