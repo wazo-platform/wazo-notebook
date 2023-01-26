@@ -2,7 +2,6 @@
 
 import argparse
 import os
-import re
 
 import jenkins
 from lxml import etree
