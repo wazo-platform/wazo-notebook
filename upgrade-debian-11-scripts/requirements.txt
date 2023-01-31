@@ -1,2 +1,3 @@
-python-jenkins
 lxml
+python-jenkins
+pyyaml
