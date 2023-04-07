@@ -17,10 +17,8 @@
   * `etc/xivo-build-tools/packages`
 * wazo-upgrade:
   * purge old package
-* wazo-tools:
-  * `dev-tools/repos/python-tag`
 * release:
-  * shortlog repositories file
+  * shortlog repositories.tsv file
 * wazo-platform.org:
   * documentation reference
 * wazo-ansible
