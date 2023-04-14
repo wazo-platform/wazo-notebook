@@ -21,9 +21,13 @@ In the directory containing all repos:
 ## Bump GPG keys expiration
 
 * Builder key
+* See the wiki: https://wiki.wazo.io/en/infrastructure/debian_repository
+
+## Rotate release GPG keys
+
 * Release key for Wazo Platform
 * Secondary release key for Wazo Platform
-* See the wiki
+* See the wiki: https://wiki.wazo.io/en/infrastructure/debian_repository
 
 ## Previous upgrade
 
