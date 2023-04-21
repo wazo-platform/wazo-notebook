@@ -9,7 +9,7 @@ REPO_PATH="${LOCAL_GIT_REPOS}/${REPO_NAME}"
 BRANCH_NAME='bullseye'
 SCRIPT_DIR=$(pwd)
 
-"${SCRIPT_DIR}"/manage-debian-branch.py -o "${ORGANIZATION}" -r "${BRANCH_NAME}" "${REPO_NAME}" create || true
+"${SCRIPT_DIR}"/manage-debian-branch.py create -o "${ORGANIZATION}" -r "${BRANCH_NAME}" "${REPO_NAME}" || true
 
 pushd "${REPO_PATH}" > /dev/null
 git fetch
@@ -24,4 +24,4 @@ popd > /dev/null
 
 "${SCRIPT_DIR}"/jenkins-create-bullseye-job.py --doit "${REPO_NAME}"
 
-"${SCRIPT_DIR}"/manage-debian-branch.py -o "${ORGANIZATION}" -r "${BRANCH_NAME}" "${REPO_NAME}" protect || true
+"${SCRIPT_DIR}"/manage-debian-branch.py protect -o "${ORGANIZATION}" -r "${BRANCH_NAME}" "${REPO_NAME}" || true

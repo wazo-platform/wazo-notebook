@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import re
+from collections.abc import Generator
 from typing import Any
 
-import json
 import os
 import sys
 import yaml
@@ -16,13 +17,28 @@ import requests
 
 ZUUL_APP_ID = 105_849
 WAZO_PLATFORM = 'wazo-platform'
+RELEASES = ('bullseye', 'bookworm')
 
 
 @dataclass
-class ProjectRepository:
-    repo: str
-    organization: str
-    debian_release: str
+class Branch:
+    name: str
+    protected: bool
+    latest_commit_sha: str
+
+    @classmethod
+    def from_data(cls, data: dict[str, Any]) -> Branch:
+        return cls(data['name'], data['protected'], data['commit']['sha'])
+
+    def __str__(self) -> str:
+        negation = '' if self.protected else 'not '
+        return f'Branch "{self.name}" is {negation}protected. Latest commit: {self.latest_commit_sha}'
+
+
+class Session:
+    def __init__(self, args: Namespace) -> None:
+        self._args = args
+        self.organization = args.organization
 
     @cached_property
     def token(self) -> str:
@@ -31,70 +47,139 @@ class ProjectRepository:
             raise RuntimeError('Unable to read github_token from WDK config file')
         return token
 
-    @classmethod
-    def from_args(cls, args: Namespace) -> ProjectRepository:
-        return cls(repo=args.repo, organization=args.organization, debian_release=args.debian_release)
-
-    def request(self, path: str = '', method: str = 'get', **kwargs) -> dict[str, Any] | None:
-        suffix = f'/{path.lstrip("/")}' if path else ''
-        url = f'https://api.github.com/repos/{self.organization}/{self.repo}{suffix}'
-        kwargs['headers'] = {
+    @cached_property
+    def default_headers(self) -> dict[str, str]:
+        return {
             "Accept": "application/vnd.github+json",
             "Authorization": f"Bearer {self.token}",
             "X-GitHub-Api-Version": "2022-11-28",
         }
+
+    def request(self, path: str = '', method: str = 'get', **kwargs) -> dict[str, Any] | None:
+        url = f'https://api.github.com/{path}'
+        kwargs['headers'] = self.default_headers
         r = getattr(requests, method)(url, **kwargs)
         if r.status_code in (404, 204):
             return None
         return r.json()
 
+    def paginated_request(self, path: str, **kwargs: Any) -> list[dict[str, Any]]:
+        next_url = f'https://api.github.com/{path}'
+        results = []
+        while next_url is not None:
+            r = requests.get(next_url, headers=self.default_headers, **kwargs)
+            r.raise_for_status()
+            results.extend(r.json())
+            try:
+                next_url = re.search(r'(?<=<)(\S*)(?=>; rel="next")', r.headers.get('link', ''), re.IGNORECASE)[0]
+            except TypeError:
+                next_url = None
+        return results
+
+    def iter_organization_repos(self, include_archived: bool = False) -> Generator[ProjectRepository, None, None]:
+        for repo in self.paginated_request(f'orgs/{self.organization}/repos', params={'per_page': 100}):
+            if repo["archived"] and not include_archived:
+                continue
+            yield ProjectRepository(
+                repo['name'],
+                self.organization,
+                self._args.debian_release,
+                self
+            )
+
+    def iter_repos(self) -> Generator[ProjectRepository, None, None]:
+        if self._args.repo:
+            yield ProjectRepository.from_args(self._args, self)
+        else:
+            yield from self.iter_organization_repos(include_archived=False)
+
+
+@dataclass
+class ProjectRepository:
+    name: str
+    organization: str
+    debian_release: str
+    session: Session
+
+    @classmethod
+    def from_args(cls, args: Namespace, session: Session) -> ProjectRepository:
+        return cls(
+            name=args.repo,
+            organization=args.organization,
+            debian_release=args.debian_release,
+            session=session,
+        )
+
+    def repo_request(
+        self,
+        path: str | None = None,
+        method: str = 'get',
+        **kwargs: Any
+    ) -> dict[str, Any] | list[dict[str, Any]] | None:
+        suffix = f'/{path.lstrip("/")}' if path else ''
+        return self.session.request(
+            f'repos/{self.organization}/{self.name}{suffix}',
+            method=method,
+            **kwargs,
+        )
+
+    @cached_property
+    def branches(self) -> dict[str, Branch]:
+        return {
+            branch['name']: Branch.from_data(branch)
+            for branch in self.session.paginated_request(
+                f'repos/{self.organization}/{self.name}/branches'
+            )
+        }
+
     @cached_property
     def default_branch_name(self) -> str:
-        return self.request()['default_branch']
+        return 'main' if 'main' in self.branches else 'master'
 
     @property
     def has_zuul(self) -> bool:
         return self.organization == WAZO_PLATFORM
 
-    def get_default_branch(self) -> dict[str, Any] | None:
-        return self.request(f'branches/{self.default_branch_name}')
+    @cached_property
+    def default_branch(self) -> Branch:
+        return self.branches[self.default_branch_name]
 
-    def get_release_branch(self) -> dict[str, Any] | None:
-        return self.request(f'branches/{self.debian_release}')
+    @cached_property
+    def release_branch(self) -> Branch | None:
+        return self.branches.get(self.debian_release, None)
 
-    def get_branch_protection(self, branch: str) -> dict[str, Any]:
-        return self.request(f'branches/{branch}/protection')
+    def get_release_diff(self) -> dict[str, Any] | None:
+        return self.repo_request(f'compare/{self.default_branch_name}...{self.debian_release}')
 
     def unprotect_release_branch(self) -> None:
-        self.request(f'branches/{self.debian_release}/protection', method='delete')
+        self.repo_request(f'branches/{self.debian_release}/protection', method='delete')
 
 
-def create(repo: ProjectRepository) -> None:
+def create(args: Namespace, session: Session) -> None:
     """Create release branch with protections."""
-    release_branch = repo.get_release_branch()
-    if release_branch is not None:
+    repo = ProjectRepository.from_args(args, session)
+    if repo.release_branch is not None:
         print(f'Debian {repo.debian_release} branch already exists.')
         sys.exit(1)
-    default_branch = repo.get_default_branch()
-    repo.request('git/refs', method='post', json={
+    repo.repo_request('git/refs', method='post', json={
         "ref": f'refs/heads/{repo.debian_release}',
-        "sha": default_branch['commit']['sha'],
+        "sha": repo.release_branch.latest_commit_sha,
     })
-    protect(repo)
+    protect(args, session)
     print(f'New protected branch "{repo.debian_release}" created')
 
 
-def protect(repo: ProjectRepository) -> None:
+def protect(args: Namespace, session: Session) -> None:
     """Add branch protections to release branch."""
-    release_branch = repo.get_release_branch()
-    if release_branch is None:
+    repo = ProjectRepository.from_args(args, session)
+    if repo.release_branch is None:
         print(f'No debian {repo.debian_release} branch exists. Please create.')
         sys.exit(1)
-    if release_branch['protected'] is True:
+    if repo.release_branch.protected is True:
         print(f'Debian {repo.debian_release} branch is already protected')
         sys.exit(0)
 
-    repo.request(
+    repo.repo_request(
         f'branches/{repo.debian_release}/protection',
         method='put',
         json={
@@ -115,25 +200,26 @@ def protect(repo: ProjectRepository) -> None:
     print(f'Debian {repo.debian_release} branch is now protected')
 
 
-def unprotect(repo: ProjectRepository) -> None:
+def unprotect(args: Namespace, session: Session) -> None:
     """Remove branch protections from release branch."""
-    release_branch = repo.get_release_branch()
-    if release_branch is None:
+    repo = ProjectRepository.from_args(args, session)
+    if repo.release_branch is None:
         print(f'No debian release branch exists. Please create.')
         sys.exit(1)
-    if release_branch['protected'] is False:
+    if repo.release_branch.protected is False:
         print(f'Debian {repo.debian_release} branch is already unprotected')
         sys.exit(0)
     repo.unprotect_release_branch()
+    print(f'Debian {repo.debian_release} branch is now unprotected')
 
 
-def delete(repo: ProjectRepository) -> None:
-    release_branch = repo.get_release_branch()
-    if release_branch is None:
+def delete(args: Namespace, session: Session) -> None:
+    repo = ProjectRepository.from_args(args, session)
+    if repo.release_branch is None:
         print(f'No debian release branch exists. Nothing to do.')
         sys.exit(0)
 
-    if release_branch['protected'] is True:
+    if repo.release_branch.protected is True:
         print(f'Debian {repo.debian_release} branch is protected. Unprotect first.')
         sys.exit(0)
 
@@ -142,12 +228,31 @@ def delete(repo: ProjectRepository) -> None:
         print('Ok, not deleting.')
         sys.exit(0)
 
-    repo.request(f'git/refs/heads/{repo.debian_release}', method='delete')
+    repo.repo_request(f'git/refs/heads/{repo.debian_release}', method='delete')
     print(f'Debian {repo.debian_release} branch was deleted')
 
 
-def info(repo: ProjectRepository) -> None:
-    print(json.dumps(repo.get_release_branch(), indent=4))
+def info(args: Namespace, session: Session) -> None:
+    repo = ProjectRepository.from_args(args, session)
+    for branch in repo.branches.values():
+        print(branch)
+
+
+def list_branches(args: Namespace, session: Session) -> None:
+    for repo in session.iter_organization_repos(args.include_archived):
+        if args.outdated is False:
+            if not repo.release_branch:
+                continue
+            print(repo.name)
+            continue
+        try:
+            diff = repo.get_release_diff()
+        except requests.HTTPError as e:
+            continue
+        if diff and diff['status'] == "behind":
+            print(f'{repo.name} is behind by {diff["behind_by"]} commit(s)')
+        else:
+            print(f'{repo.name} is up to date')
 
 
 COMMANDS = {
@@ -156,21 +261,29 @@ COMMANDS = {
     'unprotect': unprotect,
     'delete': delete,
     'info': info,
+    'list': list_branches,
 }
 
 
 def get_parser() -> ArgumentParser:
     parser = ArgumentParser()
-    parser.add_argument('repo', metavar='REPOSITORY', help='Repository name')
-    parser.add_argument('command', choices=list(COMMANDS), help='Action to perform')
-    parser.add_argument(
+    common = ArgumentParser(add_help=False)
+    common.add_argument(
         '-o',
         '--organization',
         default=WAZO_PLATFORM,
         choices=[WAZO_PLATFORM, 'wazo-communication', 'TinxHQ'],
         help='GitHub organization',
     )
-    parser.add_argument('-r', '--debian-release', default='bullseye', help='Debian release name')
+    common.add_argument('-r', '--debian-release', default='bullseye', choices=RELEASES, help='Debian release name')
+    subparsers = parser.add_subparsers(dest='command', help='Action to perform')
+    repo_required = ArgumentParser(add_help=False)
+    repo_required.add_argument('repo', metavar='REPOSITORY', help='Repository name')
+    for option in ('create', 'protect', 'unprotect', 'delete', 'info'):
+        subparsers.add_parser(option, parents=[common, repo_required])
+    list_parser = subparsers.add_parser('list', parents=[common], help='List repos with release branches')
+    list_parser.add_argument('-a', '--include-archived', action='store_true', help='Include archived repos')
+    list_parser.add_argument('--outdated', action='store_true', help='List outdated only')
     return parser
 
 
@@ -187,8 +300,7 @@ def main() -> None:
     parser = get_parser()
     args = parser.parse_args()
     handle_command = COMMANDS[args.command]
-    project = ProjectRepository.from_args(args)
-    handle_command(project)
+    handle_command(args, Session(args))
 
 
 if __name__ == '__main__':
