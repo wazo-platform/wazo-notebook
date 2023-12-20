@@ -64,6 +64,6 @@ Note: the following items are linked and must be renamed at the same time (or th
 * xivo-utils:
   * `sbin/wazo-reset`
 * xivo-swagger-doc
-* xivo-monitoring
+* wazo-monitoring
 * wazo-auth-keys
 * Translations
