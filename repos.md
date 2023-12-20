@@ -36,7 +36,7 @@ General rule: one repo per Debian package
 - [wazo-sdk](https://github.com/wazo-platform/wazo-sdk): Tools for developers
 - [xgong](https://github.com/wazo-platform/xgong): Tool for interconnecting Jenkins with Asterisk (e.g. with an intercom)
 - [xivo-build-tools](https://github.com/wazo-platform/xivo-build-tools): Builder for Debian packages
-- [xivo-ci](https://github.com/wazo-platform/xivo-ci): Tools used by Jenkins (CI: Continuous Integration)
+- [wazo-ci](https://github.com/wazo-platform/wazo-ci): Tools used by Jenkins (CI: Continuous Integration)
 - [xivo-install-cd](https://github.com/wazo-platform/xivo-install-cd): Code for building the ISO image of Wazo
 - [wazo-tools](https://github.com/wazo-platform/wazo-tools): Collection of specific tools for Wazo
 
