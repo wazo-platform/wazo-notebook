@@ -26,7 +26,7 @@
 * Jenkins job
    * `<package-name>`
    * `daily-integration-tests`
-* sf-config
+* wazo-production-sf-config
   * `resources/resources.yaml`
 * wazo-acceptance
 * wazo-sdk
