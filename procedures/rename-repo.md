@@ -33,7 +33,7 @@
   * `project.yml`
 * Debian dependencies for other packages
 * requirements.txt for other packages
-* Remove old package from wazo-dev-buster distribution
+* Remove old package from wazo-dev-bullseye distribution
 * Write a warning to other devs that they should not update their machine until
   everything is merged
 * announce to other devs so that they can update their local repo
