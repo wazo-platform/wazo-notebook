@@ -36,5 +36,12 @@ print('')
 
 if args.doit:
     output = etree.tostring(xml)
-    server.create_job(job_name, output.decode())
+    try:
+        server.create_job(job_name, output.decode())
+    except jenkins.JenkinsException as ex:
+        if "already exists" in str(ex):
+            # assume existing job is okay
+            pass
+        else:
+            raise
     server.build_job(job_name)
