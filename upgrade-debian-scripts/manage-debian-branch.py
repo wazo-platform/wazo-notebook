@@ -17,7 +17,7 @@ import requests
 
 ZUUL_APP_ID = 105_849
 WAZO_PLATFORM = 'wazo-platform'
-RELEASES = ('bullseye', 'bookworm')
+RELEASES = ('bookworm', 'trixie', 'forky')
 
 
 @dataclass
@@ -163,7 +163,7 @@ def create(args: Namespace, session: Session) -> None:
         sys.exit(1)
     repo.repo_request('git/refs', method='post', json={
         "ref": f'refs/heads/{repo.debian_release}',
-        "sha": repo.release_branch.latest_commit_sha,
+        "sha": repo.default_branch.latest_commit_sha,
     })
     protect(args, session)
     print(f'New protected branch "{repo.debian_release}" created')
@@ -275,7 +275,7 @@ def get_parser() -> ArgumentParser:
         choices=[WAZO_PLATFORM, 'wazo-communication', 'TinxHQ'],
         help='GitHub organization',
     )
-    common.add_argument('-r', '--debian-release', default='bullseye', choices=RELEASES, help='Debian release name')
+    common.add_argument('-r', '--debian-release', default='bookworm', choices=RELEASES, help='Debian release name')
     subparsers = parser.add_subparsers(dest='command', help='Action to perform')
     repo_required = ArgumentParser(add_help=False)
     repo_required.add_argument('repo', metavar='REPOSITORY', help='Repository name')
