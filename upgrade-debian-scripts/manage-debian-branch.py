@@ -187,7 +187,7 @@ def protect(args: Namespace, session: Session) -> None:
             'enforce_admins': None,
             'required_status_checks': {
                 'strict': True,
-                'checks': [{'context': 'local/check', 'app_id': ZUUL_APP_ID}]
+                'checks': [{'context': 'local/wazo-check', 'app_id': ZUUL_APP_ID}]
             } if repo.has_zuul else None,
             'required_pull_request_reviews': {
                 'dismiss_stale_reviews': True,
