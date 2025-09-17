@@ -17,3 +17,4 @@ fi
 
 # Tag docker image with bookworm
 sed -i "s/:latest/:${DEBIAN_CODENAME}/g" "${JENKINSFILE}"
+sed -i "s/wazoplatform\/\${JOB_NAME}/wazoplatform\/${REPO_NAME}/" "${JENKINSFILE}"
